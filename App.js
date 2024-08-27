@@ -1,20 +1,37 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { SafeAreaView, StyleSheet, Text, View } from 'react-native';
+import MainTab from './assets/CustomTabs/MainTab';
+import { NavigationContainer, useNavigation } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
+import { useRef,useState } from 'react';
+import MainStackNavigator from './assets/CustomTabs/Navigation/MainStackNavigation';
+
+const Stack = createStackNavigator()
+
+const MainLayout= () =>{
+  const navigationRef = useRef(null);
+  const [initialRoute, setInitialRoute] = useState('welcome');
+
+  return(
+    <NavigationContainer>
+      <Stack.Navigator>
+        <Stack.Screen name="Tabs" component={MainTab} options={{headerShown:false}}/>
+      </Stack.Navigator>
+    </NavigationContainer>
+  );
+}
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <SafeAreaView style={styles.container}>
+      <MainStackNavigator/>
+    </SafeAreaView>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    //paddingTop:'auto',
   },
 });
