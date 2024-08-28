@@ -22,6 +22,10 @@ const HomeScreen = ({navigation}) => {
         navigation.navigate('Bundle')
     };
 
+    const handleNavigationToJust4U = () =>{
+        navigation.navigate('Just4U')
+    };
+
   return (
     <View style={styles.container}>
         <View style={styles.body}>
@@ -129,7 +133,7 @@ const HomeScreen = ({navigation}) => {
                                 <Text style={styles.yhh}>Data Bundle</Text>
                             </TouchableOpacity>
 
-                            <TouchableOpacity style={styles.black}>
+                            <TouchableOpacity onPress={handleNavigationToJust4U} style={styles.black}>
                                 <MaterialCommunityIcons name="star-circle-outline" size={24} color="white" />
                                 <Text style={styles.yhh}>Just4U</Text>
                             </TouchableOpacity>

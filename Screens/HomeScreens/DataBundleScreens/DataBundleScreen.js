@@ -12,11 +12,15 @@ const DataBundleScreen = ({navigation}) => {
     };
 
     const handleNavigationToSocial = () =>{
-        navigation.navigate('Social')
+        navigation.navigate('Social');
     };
 
     const handleNavigationToMashUp = () =>{
-        navigation.navigate('MashUp')
+        navigation.navigate('MashUp');
+    };
+
+    const handleNavigationToOthers = () =>{
+        navigation.navigate('Others');
     };
 
   return (
@@ -89,7 +93,7 @@ const DataBundleScreen = ({navigation}) => {
                 <AntDesign name="right" size={15} color="black" />
             </TouchableOpacity>
 
-            <TouchableOpacity style={styles.butt}>
+            <TouchableOpacity onPress={handleNavigationToOthers} style={styles.butt}>
                 <Entypo name="plus" size={25} color="grey" />
                 <View style={{marginLeft:10, marginRight:'auto'}}>
                     <Text style={{fontWeight:'bold'}}>Others</Text>
