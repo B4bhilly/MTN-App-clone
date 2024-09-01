@@ -7,8 +7,7 @@ const MidnightScreen = () => {
     <View style={styles.container}>
       <View style={styles.one}>
         <Text style={styles.bold}>
-          Use these packages to stream video services such as Iroko TV, DSTV &
-          Youtuber
+          This package can only be used between the hours of 12 am - 5 am
         </Text>
         <View style={styles.roll}>
           <TouchableOpacity
@@ -17,16 +16,12 @@ const MidnightScreen = () => {
             <View style={{ marginBottom: "auto" }}>
               <View style={styles.hi1}>
                 <Text style={[styles.pad1, { color: "white" }]}>
-                  Flexi Video Bundle
+                  Flexi Midnight Bundles
                 </Text>
                 <View style={styles.meat}>
-                  <Text style={{ marginRight: 2, marginLeft: 2 }}>VIDEO</Text>
+                  <Text style={{ marginRight: 2, marginLeft: 2 }}>MIDNIGHT</Text>
                   <View style={styles.icon}>
-                    <Entypo name="instagram" size={14} color="black" />
-                    <Ionicons name="logo-whatsapp" size={14} color="black" />
-                    <Entypo name="facebook" size={14} color="black" />
-                    <AntDesign name="wechat" size={14} color="black" />
-                    <MaterialIcons name="tiktok" size={14} color="black" />
+                      <Ionicons name="moon-sharp" size={14} color="white" />
                   </View>
                 </View>
               </View>
@@ -35,11 +30,11 @@ const MidnightScreen = () => {
             <View style={styles.tab01}>
               <View style={[styles.bod, { paddingRight: "12.5%" }]}>
                 <Text>Data</Text>
-                <Text style={{ fontWeight: "bold" }}>4.36MB - 1.51GB </Text>
+                <Text style={{ fontWeight: "bold" }}>53.00MB - 5.16GB </Text>
               </View>
               <View style={styles.bod1}>
-                <Text>Voice</Text>
-                <Text style={{ fontWeight: "bold" }}>1-366.63MINS</Text>
+                <Text>Cost</Text>
+                <Text style={{ fontWeight: "bold" }}>0.03 - 2.99</Text>
               </View>
             </View>
           </TouchableOpacity>
@@ -47,28 +42,24 @@ const MidnightScreen = () => {
           <TouchableOpacity style={styles.tab2}>
             <View style={{ marginBottom: "auto" }}>
               <View style={styles.hi1}>
-                <Text style={styles.pad1}>Video Bundle</Text>
+                <Text style={styles.pad1}>7.27GB Midnight Bundles</Text>
                 <View style={styles.meat}>
-                  <Text style={{ marginRight: 2, marginLeft: 2 }}>VIDEO</Text>
+                  <Text style={{ marginRight: 4, marginLeft: 4 ,}}>REGULAR</Text>
                   <View style={styles.icon1}>
-                    <Entypo name="instagram" size={14} color="white" />
-                    <Ionicons name="logo-whatsapp" size={14} color="white" />
-                    <Entypo name="facebook" size={14} color="white" />
-                    <AntDesign name="wechat" size={14} color="white" />
-                    <MaterialIcons name="tiktok" size={14} color="white" />
+                    <MaterialIcons name="swap-vert" size={14} color="white" />
                   </View>
                 </View>
               </View>
             </View>
 
             <View style={styles.tab01}>
-              <View style={[styles.bod, { paddingRight: "27.5%" }]}>
+              <View style={[styles.bod, { paddingRight: "34%" }]}>
                 <Text>Data</Text>
-                <Text style={{ fontWeight: "bold" }}>708.72MB</Text>
+                <Text style={{ fontWeight: "bold" }}>7.27GB</Text>
               </View>
               <View style={styles.bod1}>
                 <Text>Cost</Text>
-                <Text style={{ fontWeight: "bold" }}>GHS 10</Text>
+                <Text style={{ fontWeight: "bold" }}>GHS 3</Text>
               </View>
             </View>
           </TouchableOpacity>
@@ -159,26 +150,26 @@ const styles = StyleSheet.create({
         borderTopRightRadius: 5,
         borderBottomRightRadius: 5,
         overflow: "hidden",
-        width: "39%",
+        width: "28%",
       },
       icon: {
-        backgroundColor: "#ebe41c",
-        width: "66%",
+        backgroundColor: "#292a2e",
+        width: "auto",
         alignItems: "center",
         justifyContent: "center",
         flexDirection: "row",
         justifyContent: "space-around",
-        paddingLeft: 2,
-        paddingRight: 5,
+        paddingLeft: 4,
+        paddingRight: 4,
       },
       icon1: {
-        backgroundColor: "grey",
-        width: "66%",
+        backgroundColor: "#292a2e",
+        width: "auto",
         alignItems: "center",
         justifyContent: "center",
         flexDirection: "row",
         justifyContent: "space-around",
-        paddingLeft: 2,
-        paddingRight: 5,
+        paddingLeft: 3,
+        paddingRight: 3,
       },
 });

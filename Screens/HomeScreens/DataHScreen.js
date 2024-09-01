@@ -3,7 +3,7 @@ import React from 'react';
 import {MaterialIcons} from '@expo/vector-icons';
 import { useNavigation } from '@react-navigation/native';
 
-const DataScreen = () => {
+const DataHScreen = () => {
 
   const navigation = useNavigation();
 
@@ -16,7 +16,7 @@ const DataScreen = () => {
   };
 return (
   <View style={styles.container}>
-    <View style={styles.white}>
+    {/* <View style={styles.white}>
       <View style={{padding:30}}>
         <Text style={{fontSize:28,fontWeight:'bold',marginBottom:20,}}>12.90 GB</Text>
         <Text style={{fontSize:14,color:'grey',fontWeight:'bold'}}>Detailed Balance</Text>
@@ -42,15 +42,16 @@ return (
           <Text style={styles.text}>BUY DATA</Text>
         </TouchableOpacity>
       </View>
-    </View>
+    </View> */}
+    <Text>Data History</Text>
   </View>
     );
 };
 
-export default DataScreen;
+export default DataHScreen;
 const styles = StyleSheet.create({
   container: {
-    backgroundColor:'#292a2e',
+    backgroundColor:'white',
     height:'100%'
   },
   white:{

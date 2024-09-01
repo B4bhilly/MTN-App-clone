@@ -1,6 +1,6 @@
 import { StyleSheet, Text, View, TouchableOpacity } from "react-native";
 import React from "react";
-import { AntDesign, Ionicons, MaterialIcons, Entypo } from "@expo/vector-icons";
+import { AntDesign, Ionicons, MaterialIcons, Entypo, FontAwesome5 } from "@expo/vector-icons";
 
 const VideoScreen = () => {
   return (
@@ -16,29 +16,25 @@ const VideoScreen = () => {
             <View style={{ marginBottom: "auto" }}>
               <View style={styles.hi1}>
                 <Text style={[styles.pad1, { color: "white" }]}>
-                  Flexi Video Bundle
+                  Flexi Video Bundles
                 </Text>
                 <View style={styles.meat}>
                   <Text style={{ marginRight: 2, marginLeft: 2 }}>VIDEO</Text>
                   <View style={styles.icon}>
-                    <Entypo name="instagram" size={14} color="black" />
-                    <Ionicons name="logo-whatsapp" size={14} color="black" />
-                    <Entypo name="facebook" size={14} color="black" />
-                    <AntDesign name="wechat" size={14} color="black" />
-                    <MaterialIcons name="tiktok" size={14} color="black" />
+                    <FontAwesome5 name="youtube" size={14} color="black" />
                   </View>
                 </View>
               </View>
             </View>
 
             <View style={styles.tab01}>
-              <View style={[styles.bod, { paddingRight: "12.5%" }]}>
+              <View style={[styles.bod, { paddingRight: "11.5%" }]}>
                 <Text>Data</Text>
-                <Text style={{ fontWeight: "bold" }}>4.36MB - 1.51GB </Text>
+                <Text style={{ fontWeight: "bold" }}>4.07MB - 52.87GB </Text>
               </View>
               <View style={styles.bod1}>
-                <Text>Voice</Text>
-                <Text style={{ fontWeight: "bold" }}>1-366.63MINS</Text>
+                <Text>Cost</Text>
+                <Text style={{ fontWeight: "bold" }}>GHS 0.03 - 399</Text>
               </View>
             </View>
           </TouchableOpacity>
@@ -46,15 +42,11 @@ const VideoScreen = () => {
           <TouchableOpacity style={styles.tab2}>
             <View style={{ marginBottom: "auto" }}>
               <View style={styles.hi1}>
-                <Text style={styles.pad1}>Video Bundle</Text>
+                <Text style={styles.pad1}>135.69MB Video Bundles</Text>
                 <View style={styles.meat}>
                   <Text style={{ marginRight: 2, marginLeft: 2 }}>VIDEO</Text>
                   <View style={styles.icon1}>
-                    <Entypo name="instagram" size={14} color="white" />
-                    <Ionicons name="logo-whatsapp" size={14} color="white" />
-                    <Entypo name="facebook" size={14} color="white" />
-                    <AntDesign name="wechat" size={14} color="white" />
-                    <MaterialIcons name="tiktok" size={14} color="white" />
+                    <FontAwesome5 name="youtube" size={14} color="white" />
                   </View>
                 </View>
               </View>
@@ -63,7 +55,57 @@ const VideoScreen = () => {
             <View style={styles.tab01}>
               <View style={[styles.bod, { paddingRight: "27.5%" }]}>
                 <Text>Data</Text>
-                <Text style={{ fontWeight: "bold" }}>708.72MB</Text>
+                <Text style={{ fontWeight: "bold" }}>135.69MB</Text>
+              </View>
+              <View style={styles.bod1}>
+                <Text>Cost</Text>
+                <Text style={{ fontWeight: "bold" }}>GHS 1</Text>
+              </View>
+            </View>
+          </TouchableOpacity>
+
+          <TouchableOpacity style={styles.tab2}>
+            <View style={{ marginBottom: "auto" }}>
+              <View style={styles.hi1}>
+                <Text style={styles.pad1}>678.43MB Video Bundles</Text>
+                <View style={styles.meat}>
+                  <Text style={{ marginRight: 2, marginLeft: 2 }}>VIDEO</Text>
+                  <View style={styles.icon1}>
+                    <FontAwesome5 name="youtube" size={14} color="white" />
+                  </View>
+                </View>
+              </View>
+            </View>
+
+            <View style={styles.tab01}>
+              <View style={[styles.bod, { paddingRight: "27.5%" }]}>
+                <Text>Data</Text>
+                <Text style={{ fontWeight: "bold" }}>678.43MB</Text>
+              </View>
+              <View style={styles.bod1}>
+                <Text>Cost</Text>
+                <Text style={{ fontWeight: "bold" }}>GHS 5</Text>
+              </View>
+            </View>
+          </TouchableOpacity>
+
+          <TouchableOpacity style={styles.tab2}>
+            <View style={{ marginBottom: "auto" }}>
+              <View style={styles.hi1}>
+                <Text style={styles.pad1}>1.33GB Video Bundles</Text>
+                <View style={styles.meat}>
+                  <Text style={{ marginRight: 2, marginLeft: 2 }}>VIDEO</Text>
+                  <View style={styles.icon1}>
+                    <FontAwesome5 name="youtube" size={14} color="white" />
+                  </View>
+                </View>
+              </View>
+            </View>
+
+            <View style={styles.tab01}>
+              <View style={[styles.bod, { paddingRight: "27%" }]}>
+                <Text>Data</Text>
+                <Text style={{ fontWeight: "bold" }}>1.33GB      </Text>
               </View>
               <View style={styles.bod1}>
                 <Text>Cost</Text>
@@ -71,6 +113,7 @@ const VideoScreen = () => {
               </View>
             </View>
           </TouchableOpacity>
+           
         </View>
         <View
           style={{
@@ -158,26 +201,26 @@ const styles = StyleSheet.create({
     borderTopRightRadius: 5,
     borderBottomRightRadius: 5,
     overflow: "hidden",
-    width: "39%",
+    width: "auto",
   },
   icon: {
     backgroundColor: "#ebe41c",
-    width: "66%",
+    width: "auto",
     alignItems: "center",
     justifyContent: "center",
     flexDirection: "row",
     justifyContent: "space-around",
-    paddingLeft: 2,
-    paddingRight: 5,
+    paddingLeft: 4,
+    paddingRight: 4,
   },
   icon1: {
     backgroundColor: "grey",
-    width: "66%",
+    width: "auto",
     alignItems: "center",
     justifyContent: "center",
     flexDirection: "row",
     justifyContent: "space-around",
-    paddingLeft: 2,
-    paddingRight: 5,
+    paddingLeft: 4,
+    paddingRight: 4,
   },
 });

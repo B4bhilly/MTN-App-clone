@@ -4,7 +4,7 @@ import {Feather} from '@expo/vector-icons';
 import { useNavigation } from '@react-navigation/native';
 
 
-const AirtimeScreen = () =>  {
+const AirtimeHScreen = () =>  {
 
     const navigation = useNavigation();
 
@@ -17,7 +17,7 @@ const AirtimeScreen = () =>  {
     };
   return (
     <View style={styles.container}>
-        <View style={styles.white}>
+        {/* <View style={styles.white}>
             <View style={{padding:30}}>
                 <Text style={{fontSize:28,fontWeight:'bold',marginBottom:20,}}>GHS 0.00</Text>
                 <Text style={{fontSize:14,color:'grey',fontWeight:'bold'}}>Detailed Balance</Text>
@@ -53,16 +53,17 @@ const AirtimeScreen = () =>  {
                     <Text style={styles.text}>BUY AIRTIME</Text>
                 </TouchableOpacity>
             </View>
-        </View>
+        </View> */}
+        <Text>Airtime History</Text>
     </View>
   )
 };
 
-export default AirtimeScreen;
+export default AirtimeHScreen;
 
 const styles = StyleSheet.create({
     container: {
-        backgroundColor:'#292a2e',
+        backgroundColor:'white',
         height:'100%',
     },
     white:{

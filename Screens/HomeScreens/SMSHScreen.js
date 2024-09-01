@@ -3,7 +3,7 @@ import React from 'react';
 import {AntDesign, Feather, MaterialIcons,MaterialCommunityIcons} from '@expo/vector-icons'
 import { useNavigation } from '@react-navigation/native';
 
-const SMSScreen = () =>  {
+const SMSHScreen = () =>  {
 
   const navigation = useNavigation();
 
@@ -13,7 +13,7 @@ const SMSScreen = () =>  {
 
   return (
     <View style={styles.container}>
-      <View style={styles.white}>
+      {/* <View style={styles.white}>
 
         <View style={{padding:30}}>
           <Text style={{fontSize:28,fontWeight:'bold',marginBottom:20,}}>4,533 SMS</Text>
@@ -36,15 +36,16 @@ const SMSScreen = () =>  {
             <Text style={styles.text}>VIEW HISTORY</Text>
           </TouchableOpacity>
         </View>
-      </View>
+      </View> */}
+      <Text>SMS History</Text>
     </View>
       );
 }
-export default SMSScreen;
+export default SMSHScreen;
 
 const styles = StyleSheet.create({
     container: {
-        backgroundColor:'#292a2e',
+        backgroundColor:'white',
         height:'100%'
     },
     white:{

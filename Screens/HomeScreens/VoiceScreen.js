@@ -3,12 +3,17 @@ import React from 'react'
 
 const VoiceScreen = () => {
   return (
-    <View>
-      <Text>VoiceScreen</Text>
+    <View style={styles.container}>
+      <Text>Voice History</Text>
     </View>
   )
 }
 
 export default VoiceScreen
 
-const styles = StyleSheet.create({})
+const styles = StyleSheet.create({
+  container: {
+    backgroundColor:'white',
+    height:'100%'
+},
+})

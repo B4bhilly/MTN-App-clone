@@ -1,13 +1,15 @@
-import React, { useState, useEffect } from 'react';
-import { Text, View, StyleSheet, TouchableOpacity } from 'react-native';
-import { AntDesign } from '@expo/vector-icons';
-import AirtimeScreen from '../../../Screens/HomeScreens/AirtimeScreen';
-import DataScreen from '../../../Screens/HomeScreens/DataScreen';
-import SMSScreen from '../../../Screens/HomeScreens/SMSScreen';
+import React, { useState, useEffect } from "react";
+import {Text,View,StyleSheet,TouchableOpacity,ScrollView,} from "react-native";
+import { AntDesign } from "@expo/vector-icons";
+import AirtimeHScreen from "./AirtimeHScreen";
+import DataHScreen from "./DataHScreen";
+import SMSHScreen from "./SMSHScreen";
+import VoiceScreen from "./VoiceScreen";
 
-export default function DBNavigator({ navigation, route }) {
-  const { initialTab } = route.params || {}; // Get the initialTab from navigation params
-  const [selectedTab, setSelectedTab] = useState('Airtime'); // Default tab is 'Airtime'
+
+export default function HistoryP({ navigation, route }) {
+  const {initialTab} = route.params || {};// Get the initialTab from navigation params
+  const [selectedTab, setSelectedTab] = useState("Airtime");
 
   // Set the initial tab from navigation params if provided
   useEffect(() => {
@@ -18,14 +20,16 @@ export default function DBNavigator({ navigation, route }) {
 
   const renderContent = () => {
     switch (selectedTab) {
-      case 'Airtime':
-        return <AirtimeScreen />;
-      case 'Data':
-        return <DataScreen />;
-      case 'SMS':
-        return <SMSScreen />;
+      case "Airtime":
+        return <AirtimeHScreen />;
+      case "Data":
+        return <DataHScreen />;
+      case "SMS":
+        return <SMSHScreen />;
+      case "Voice":
+        return <VoiceScreen />;
       default:
-        return <AirtimeScreen />;
+        return <AirtimeHScreen />;
     }
   };
 
@@ -53,6 +57,12 @@ export default function DBNavigator({ navigation, route }) {
             onPress={() => setSelectedTab('SMS')}
             style={[styles.tab, selectedTab === 'SMS' && styles.activeTab]}>
             <Text style={styles.tabLabel}>SMS</Text>
+          </TouchableOpacity>
+          <TouchableOpacity
+            onPress={() => setSelectedTab("Voice")}
+            style={[styles.tab, selectedTab === "Voice" && styles.activeTab]}
+          >
+            <Text style={styles.tabLabel}>Voice</Text>
           </TouchableOpacity>
         </View>
         <View style={styles.contentContainer}>
@@ -84,6 +94,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#292a2e',
     height: 50,
     flexDirection: 'row',
+    justifyContent:'space-between'
   },
   tab: {
     justifyContent: 'center',
