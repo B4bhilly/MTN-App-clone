@@ -107,7 +107,7 @@ const SendMomoScreen = ({ navigation }) => {
                     </TouchableOpacity>
                 </Pressable>
             </Pressable>
-        </Modal>
+      </Modal>
     </KeyboardAvoidingView>
   );
 };

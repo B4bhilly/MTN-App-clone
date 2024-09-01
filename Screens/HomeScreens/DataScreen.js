@@ -11,9 +11,10 @@ const DataScreen = () => {
     navigation.navigate('History',{initialTab:'Data'});
   };
 
-  const handleNavigationToMomo =() =>{
-    navigation.navigate('SendMomo');
+  const handleNavigationToBundle = () => {
+    navigation.navigate("Bundle");
   };
+
 return (
   <View style={styles.container}>
     <View style={styles.white}>
@@ -38,7 +39,7 @@ return (
           <Text style={styles.text}>VIEW HISTORY</Text>
         </TouchableOpacity>
 
-        <TouchableOpacity onPress={handleNavigationToMomo} style={styles.button1}>
+        <TouchableOpacity onPress={handleNavigationToBundle} style={styles.button1}>
           <Text style={styles.text}>BUY DATA</Text>
         </TouchableOpacity>
       </View>

@@ -12,8 +12,8 @@ const AirtimeScreen = () =>  {
         navigation.navigate('History',{initialTab:'Airtime'});
     };
 
-    const handleNavigationToMomo =() =>{
-        navigation.navigate('SendMomo');
+    const handleNavigationToBuy =() =>{
+        navigation.navigate('Buy');
     };
   return (
     <View style={styles.container}>
@@ -49,7 +49,7 @@ const AirtimeScreen = () =>  {
                     <Text style={styles.text}>VIEW HISTORY</Text>
                 </TouchableOpacity>
 
-                <TouchableOpacity onPress={handleNavigationToMomo} style={styles.button1}>
+                <TouchableOpacity onPress={handleNavigationToBuy} style={styles.button1}>
                     <Text style={styles.text}>BUY AIRTIME</Text>
                 </TouchableOpacity>
             </View>
