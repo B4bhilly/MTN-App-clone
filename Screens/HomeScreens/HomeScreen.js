@@ -32,7 +32,7 @@ const HomeScreen = ({ navigation }) => {
 
   const handleNavigationToMashUp = () =>{
     navigation.navigate('MashUp');
-};
+  };
 
   return (
     <View style={styles.container}>

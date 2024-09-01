@@ -3,6 +3,23 @@ import React from 'react';
 import {MaterialIcons, Octicons, Ionicons, MaterialCommunityIcons, Feather, FontAwesome6} from '@expo/vector-icons'
 
 const ShopScreen = ({navigation}) => {
+  
+  const handleNavigationToBundle = () => {
+    navigation.navigate("Bundle");
+  };
+
+  const handleNavigationToMashUp = () =>{
+    navigation.navigate('MashUp');
+  };
+
+  const handleNavigationToFibre = () =>{
+    navigation.navigate('Fibre');
+  };
+
+  const handleNavigationToJust4U = () => {
+    navigation.navigate("Just4U");
+  };
+
   return (
     <View style={styles.container}>
       <View style={{padding:20,marginTop:30}}>
@@ -21,14 +38,14 @@ const ShopScreen = ({navigation}) => {
                   <Text>Airtime</Text>
                 </TouchableOpacity>
 
-                <TouchableOpacity style={{alignItems:'center',marginLeft:5}}>
+                <TouchableOpacity onPress={handleNavigationToBundle} style={{alignItems:'center',marginLeft:5}}>
                   <View style={styles.icon}>
                   <MaterialIcons name="swap-vert" size={30} color="white" />
                   </View>
                   <Text>Data</Text>
                 </TouchableOpacity>
 
-                <TouchableOpacity style={{alignItems:'center',marginRight:10}}>
+                <TouchableOpacity onPress={handleNavigationToMashUp} style={{alignItems:'center',marginRight:10}}>
                   <View style={styles.icon}>
                   <Octicons name="database" size={24} color="white" />
                   </View>
@@ -37,14 +54,14 @@ const ShopScreen = ({navigation}) => {
             </View>
 
             <View style={{flexDirection:'row',justifyContent:'space-between',marginBottom:10,}}>
-                <TouchableOpacity style={{alignItems:'center',marginLeft:-1,}}>
+                <TouchableOpacity onPress={handleNavigationToFibre} style={{alignItems:'center',marginLeft:-1,}}>
                   <View style={styles.icon}>
                     <Octicons name="broadcast" size={24} color="white" />
                   </View>
                   <Text>Broadband</Text>
                 </TouchableOpacity>
 
-                <TouchableOpacity style={{alignItems:'center',marginLeft:10,}}>
+                <TouchableOpacity onPress={handleNavigationToJust4U} style={{alignItems:'center',marginLeft:10,}}>
                   <View style={styles.icon}>
                     <MaterialCommunityIcons name="star-circle-outline" size={30} color="white" />
                   </View>

@@ -3,9 +3,15 @@ import React from 'react';
 import {AntDesign, FontAwesome6, MaterialIcons,MaterialCommunityIcons} from '@expo/vector-icons'
 
 const MomoScreen = ({navigation}) => {
+
   const handlenavigationToHomeScreen = () =>{
     navigation.navigate('Home')
   };
+
+  const handleNavigationToSendMomo = () =>{
+    navigation.navigate("SendMomo");
+  };
+
   return (
     <View style={styles.container}>
       <View style={styles.zero}>
@@ -25,7 +31,7 @@ const MomoScreen = ({navigation}) => {
         <View style={styles.three}>
           <Text style={{fontSize:20,marginBottom:20 }}>Services</Text>
           <View style={{flexDirection:'row',justifyContent:'space-between',padding:10,}}>
-            <TouchableOpacity style={{alignItems:'center',marginLeft:10,}}>
+            <TouchableOpacity onPress={handleNavigationToSendMomo} style={{alignItems:'center',marginLeft:10,}}>
               <View style={styles.icon}>
                 <MaterialIcons name="person-add-alt-1" size={30} color="white" />
               </View>

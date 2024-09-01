@@ -1,13 +1,18 @@
 import { StyleSheet, Text, View , ScrollView, TouchableOpacity} from 'react-native';
 import React from 'react';
-import {AntDesign, MaterialCommunityIcons, MaterialIcons, Ionicons, Octicons, FontAwesome6, Feather, SimpleLineIcons} from '@expo/vector-icons'
+import {AntDesign, MaterialCommunityIcons, MaterialIcons, Ionicons, Octicons, FontAwesome6, Feather, SimpleLineIcons, Entypo} from '@expo/vector-icons'
 
 
 const MoreScreen = ({navigation}) => {
   return (
     <View style={styles.container}>
         <View style={styles.zero}>
-          <TouchableOpacity style={styles.profile}></TouchableOpacity>
+          <TouchableOpacity style={styles.profile}>
+            <Ionicons name="person" size={44} color="white" />
+            <View style={styles.plus}>
+              <Entypo name="plus" size={24} color="#ebe41c" />
+            </View>
+          </TouchableOpacity>
           <View style={{position:'absolute',top:60,justifyContent:'center',
             alignItems:'center'
           }}>
@@ -150,7 +155,7 @@ const styles = StyleSheet.create({
     width:100,
     height:100,
     borderRadius:50,
-    backgroundColor:'yellow',
+    backgroundColor:'#ebe41c',
     alignItems:'center',
     justifyContent:'center',
     //marginBottom:20,
@@ -182,12 +187,23 @@ const styles = StyleSheet.create({
   },
   icon:{
     width:50,
-     height:50,
-     borderWidth:2,
-     borderColor:'orange',
-      borderRadius:10,
-      backgroundColor:'white',
-      justifyContent:'center',
-      alignItems:'center',
+    height:50,
+    borderWidth:2,
+    borderColor:'orange',
+    borderRadius:10,
+    backgroundColor:'white',
+    justifyContent:'center',
+    alignItems:'center',
+  },
+  plus:{
+    position:'absolute',
+    height:25,
+    width:25,
+    borderRadius:100,
+    backgroundColor:'white',
+    alignItems:'center',
+    justifyContent:'center',
+    top:65,
+    left:70,
   },
 })
