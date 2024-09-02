@@ -20,6 +20,10 @@ const ShopScreen = ({navigation}) => {
     navigation.navigate("Just4U");
   };
 
+  const handleNavigationToBuy = () =>{
+    navigation.navigate('Buy')
+  };
+
   return (
     <View style={styles.container}>
       <View style={{padding:20,marginTop:30}}>
@@ -31,7 +35,7 @@ const ShopScreen = ({navigation}) => {
           <Text style={{fontSize:20}}>What do you need?</Text>
           <View style={styles.border}>
             <View style={{flexDirection:'row',justifyContent:'space-between',marginBottom:10,marginLeft:10,}}>
-                <TouchableOpacity style={{alignItems:'center',}}>
+                <TouchableOpacity onPress={handleNavigationToBuy} style={{alignItems:'center',}}>
                   <View style={styles.icon}>
                   <MaterialIcons name="sim-card" size={24} color="white" />
                   </View>

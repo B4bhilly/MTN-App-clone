@@ -34,6 +34,14 @@ const HomeScreen = ({ navigation }) => {
     navigation.navigate('MashUp');
   };
 
+  const handleNavigationToBView =() =>{
+    navigation.navigate('BView');
+  };
+
+  const handleNavigationToQView =() =>{
+    navigation.navigate('QView');
+  };
+
   return (
     <View style={styles.container}>
       <View style={styles.body}>
@@ -47,7 +55,7 @@ const HomeScreen = ({ navigation }) => {
                 <AntDesign name="sync" size={12} color="black" />
               </View>
 
-              <TouchableOpacity style={styles.title}>
+              <TouchableOpacity onPress={handleNavigationToBView} style={styles.title}>
                 <Text style={styles.pad}>View all</Text>
                 <AntDesign name="rightcircle" size={14} color="black" />
               </TouchableOpacity>
@@ -166,7 +174,7 @@ const HomeScreen = ({ navigation }) => {
                 <Text style={{ fontSize: 18 }}>Quick Access</Text>
               </View>
 
-              <TouchableOpacity style={styles.title}>
+              <TouchableOpacity onPress={handleNavigationToQView} style={styles.title}>
                 <Text style={styles.pad}>View all</Text>
                 <AntDesign name="rightcircle" size={14} color="black" />
               </TouchableOpacity>
@@ -178,11 +186,13 @@ const HomeScreen = ({ navigation }) => {
                   onPress={handleNavigationToBundle}
                   style={styles.black}
                 >
-                  <MaterialCommunityIcons
-                    name="swap-vertical-circle-outline"
-                    size={24}
-                    color="white"
-                  />
+                  <View style={styles.circle}>
+                    <MaterialCommunityIcons
+                      name="swap-vertical"
+                      size={24}
+                      color="black"
+                    />
+                  </View>
                   <Text style={styles.yhh}>Data Bundle</Text>
                 </TouchableOpacity>
 
@@ -190,27 +200,29 @@ const HomeScreen = ({ navigation }) => {
                   onPress={handleNavigationToJust4U}
                   style={styles.black}
                 >
-                  <MaterialCommunityIcons
-                    name="star-circle-outline"
-                    size={24}
-                    color="white"
-                  />
+                  <View style={styles.circle}>
+                   <MaterialCommunityIcons name="star" size={24} color="black" />
+                  </View>
                   <Text style={styles.yhh}>Just4U</Text>
                 </TouchableOpacity>
               </View>
 
               <View style={styles.man1}>
                 <TouchableOpacity onPress={handleNavigationToSendMomo} style={styles.black}>
-                  <FontAwesome6
-                    name="circle-dollar-to-slot"
-                    size={24}
-                    color="white"
-                  />
+                  <View style={styles.circle}>
+                    <FontAwesome6
+                      name="circle-dollar-to-slot"
+                      size={20}
+                      color="black"
+                    />
+                  </View>
                   <Text style={styles.yhh}>Send Momo</Text>
                 </TouchableOpacity>
 
                 <TouchableOpacity onPress={handleNavigationToMashUp} style={styles.black}>
-                  <Octicons name="database" size={24} color="white" />
+                  <View style={styles.circle}>
+                    <Octicons name="database" size={22} color="black" />
+                  </View>
                   <Text style={styles.yhh}>MashUp</Text>
                 </TouchableOpacity>
               </View>
@@ -392,23 +404,33 @@ const styles = StyleSheet.create({
   man: {
     flexDirection: "row",
     paddingLeft: 20,
-    padding: 20,
+    padding: 10,
+    justifyContent:'center',
   },
   man1: {
     flexDirection: "row",
-    paddingLeft: 20,
+    paddingLeft: 10,
     marginBottom: 40,
+    justifyContent:'center',    
   },
   black: {
     backgroundColor: "#292a2e",
     height: 55,
     width: 150,
-    marginRight: 20,
+    marginRight: 10,
     borderRadius: 10,
     alignItems: "center",
     justifyContent: "flex-start",
     paddingLeft: 15,
     flexDirection: "row",
+  },
+  circle:{
+    height:30,
+    width:30,
+    backgroundColor:'white',
+    borderRadius:100,
+    alignItems: "center",
+    justifyContent: "center",
   },
   yhh: {
     color: "white",

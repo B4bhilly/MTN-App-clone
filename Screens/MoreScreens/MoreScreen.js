@@ -4,6 +4,10 @@ import {AntDesign, MaterialCommunityIcons, MaterialIcons, Ionicons, Octicons, Fo
 
 
 const MoreScreen = ({navigation}) => {
+  
+  const handleNavigationToAccount = () =>{
+    navigation.navigate('Account')
+  };
   return (
     <View style={styles.container}>
         <View style={styles.zero}>
@@ -18,9 +22,9 @@ const MoreScreen = ({navigation}) => {
           }}>
             <Text style={{fontSize:20, }}>User</Text>
             <Text style={{color:'grey',marginBottom:10}}>number</Text>
-            <TouchableOpacity style={styles.two}>
-              <Octicons style={{marginRight:5}} name="feed-person" size={15} color="black" />
-              <Text>MY ACCOUNT</Text>
+            <TouchableOpacity onPress={handleNavigationToAccount} style={styles.two}>
+              <Octicons name="feed-person" size={15} color="black" />
+              <Text style={[styles.bold, {paddingLeft:5,paddingRight:5,}]}>MY ACCOUNT</Text>
               <AntDesign name="right" size={15} color="black" />
             </TouchableOpacity>
           </View>
@@ -97,8 +101,8 @@ const MoreScreen = ({navigation}) => {
                   <View style={styles.icon}>
                     <FontAwesome6 name="shop" size={24} color="black" />
                   </View>
-                  <Text>Contact</Text>
-                  <Text>Us</Text>
+                  <Text>Find a</Text>
+                  <Text>Store</Text>
                 </TouchableOpacity> 
               </View> 
             </View>
@@ -118,9 +122,9 @@ const MoreScreen = ({navigation}) => {
             
             <View style={{alignItems:'center',justifyContent:'center',marginBottom:40,}}>
               <Text style={{color:'grey',marginBottom:10}}>App Version</Text>
-              <TouchableOpacity style={styles.two}>
-                <SimpleLineIcons style={{marginRight:20}} name="logout" size={14} color="black" />
-                <Text>LOGOUT</Text>
+              <TouchableOpacity style={[styles.two, {width:120}]}>
+                <SimpleLineIcons style={{marginRight:15}} name="logout" size={14} color="black" />
+                <Text style={styles.bold}>LOGOUT</Text>
               </TouchableOpacity>
             </View>
           </ScrollView>
@@ -172,8 +176,8 @@ const styles = StyleSheet.create({
     borderTopLeftRadius:20,
   },
   two:{
-    height:40,
-    width:150,
+    height:32,
+    width:140,
     borderWidth:2,
     borderRadius:50,
     flexDirection:'row',
@@ -205,5 +209,9 @@ const styles = StyleSheet.create({
     justifyContent:'center',
     top:65,
     left:70,
+  },
+  bold:{
+    fontSize:12,
+    fontWeight:'bold',
   },
 })

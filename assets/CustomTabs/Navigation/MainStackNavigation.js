@@ -11,7 +11,7 @@ import VoiceScreen from '../../../Screens/HomeScreens/VoiceScreen';
 import HistoryP from '../../../Screens/HomeScreens/HistoryP'
 import BuyAirtime from '../../../Screens/HomeScreens/BuyAirtime';
 import DataBundleScreen from '../../../Screens/HomeScreens/DataBundleScreens/DataBundleScreen';
-import DataBundlesScreen from '../../../Screens/HomeScreens/DataBundlesScreen';
+import DataBundlesScreen from '../../../Screens/HomeScreens/DataBundleScreens/DataBundlesScreen';
 import FibreScreen from '../../../Screens/HomeScreens/DataBundleScreens/FibreScreen';
 import SocialScreen from '../../../Screens/HomeScreens/DataBundleScreens/SocialScreen';
 import MashUp from '../../../Screens/HomeScreens/DataBundleScreens/Mashup&Others/MashUp';
@@ -22,6 +22,9 @@ import GhsFiveScreen from '../../../Screens/HomeScreens/DataBundleScreens/Mashup
 import GhsTenScreen from '../../../Screens/HomeScreens/DataBundleScreens/Mashup&Others/GhsTenScreen';
 import OthersScreen from '../../../Screens/HomeScreens/DataBundleScreens/Mashup&Others/OthersScreen';
 import SendMomoScreen from '../../../Screens/HomeScreens/SendMomoScreen';
+import AccountScreen from '../../../Screens/MoreScreens/AccountScreen';
+import BViewAll from '../../../Screens/HomeScreens/BViewAll';
+import QViewAll from '../../../Screens/HomeScreens/QViewAll';
 
 
 const Stack = createNativeStackNavigator();
@@ -51,6 +54,10 @@ const MainStackNavigator = () => {
         <Stack.Screen name="Others" component={OthersScreen} options={{headerShown:false}}/>
         <Stack.Screen name="Just4U" component={Just4UScreen} options={{headerShown:false}}/>
         <Stack.Screen name="SendMomo" component={SendMomoScreen} options={{headerShown:false}}/>
+        <Stack.Screen name="Account" component={AccountScreen} options={{headerShown:false}}/>
+        <Stack.Screen name="BView" component={BViewAll} options={{headerShown:false}}/>
+        <Stack.Screen name="QView" component={QViewAll} options={{headerShown:false}}/>
+        
       </Stack.Navigator>
     </NavigationContainer>
   );
