@@ -7,7 +7,7 @@ const FlexiScreen = () => {
     <View style={styles.container}>
       <View style={styles.one}>
         <Text style={styles.bold}>
-          Coustomize a mix of data and voice with a free social package too.
+          Customize a mix of data and voice with a free social package too.
         </Text>
         <View style={styles.roll}>
           <TouchableOpacity

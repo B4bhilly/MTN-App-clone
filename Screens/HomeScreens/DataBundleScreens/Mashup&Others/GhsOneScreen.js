@@ -8,7 +8,7 @@ const GhsOneScreen = () => {
   return (
     <View style={styles.container}>
         <ScrollView showsVerticalScrollIndicator={false} style={styles.one}>
-            <Text style={styles.bold}>Coustomize a mix of data and voice with a free social package too.</Text>
+            <Text style={styles.bold}>Customize a mix of data and voice with a free social package too.</Text>
             <View  style={styles.roll}>
                 <TouchableOpacity style={styles.tab2}>
                     <View style={{marginBottom:'auto'}}>
