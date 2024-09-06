@@ -25,6 +25,7 @@ import SendMomoScreen from '../../../Screens/HomeScreens/SendMomoScreen';
 import AccountScreen from '../../../Screens/MoreScreens/AccountScreen';
 import BViewAll from '../../../Screens/HomeScreens/BViewAll';
 import QViewAll from '../../../Screens/HomeScreens/QViewAll';
+import Review from '../../../Screens/HomeScreens/Review';
 
 
 const Stack = createNativeStackNavigator();
@@ -57,6 +58,7 @@ const MainStackNavigator = () => {
         <Stack.Screen name="Account" component={AccountScreen} options={{headerShown:false}}/>
         <Stack.Screen name="BView" component={BViewAll} options={{headerShown:false}}/>
         <Stack.Screen name="QView" component={QViewAll} options={{headerShown:false}}/>
+        <Stack.Screen name="Review" component={Review} options={{headerShown:false}}/>
         
       </Stack.Navigator>
     </NavigationContainer>

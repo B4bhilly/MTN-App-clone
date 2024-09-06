@@ -42,6 +42,10 @@ const HomeScreen = ({ navigation }) => {
     navigation.navigate('QView');
   };
 
+  const handleNavigationToReview =() =>{
+    navigation.navigate('Review');
+  };
+
   return (
     <View style={styles.container}>
       <View style={styles.body}>
@@ -233,7 +237,7 @@ const HomeScreen = ({ navigation }) => {
                 </Text>
               </View>
 
-              <TouchableOpacity style={styles.tab2}>
+              <TouchableOpacity onPress={handleNavigationToReview} style={styles.tab2}>
                 <View style={{ marginBottom: "auto" }}>
                   <View style={styles.hi1}>
                     <Text style={styles.pad1}>Data Bundle</Text>

@@ -6,15 +6,15 @@ import {
   Modal,
   Pressable,
   TextInput,
-  
 } from "react-native";
 import React, { useState } from "react";
 import { AntDesign, FontAwesome5, MaterialIcons } from "@expo/vector-icons";
-import RadioButtonGroup from "../../assets/CustomTabs/RadioButton";
+import RadioButtonGroup from "../../assets/CustomTabs/RadioButton1";
 
 const BuyAirtime = ({ navigation }) => {
   const [isDrawerVisible, setIsDrawerVisible] = useState(false); // State for drawer visibility
   const [selectedNetwork, setSelectedNetwork] = useState("MTN"); // State for selected network
+  const [selectedRecipient, setSelectedRecipient] = useState("existing"); //State for selected recipient
 
   const toggleDrawer = () => {
     setIsDrawerVisible(!isDrawerVisible);
@@ -50,29 +50,36 @@ const BuyAirtime = ({ navigation }) => {
           <Text>Broadband Bundles</Text>
         </View>
         <View style={styles.two}>
-            <Text>Select Network </Text>
-            <TouchableOpacity onPress={toggleDrawer} style={styles.button}>
-                <Text style={[styles.text0, { color: "white" }]}>
-                {selectedNetwork}
-                </Text>
-                <FontAwesome5 name="angle-down" size={24} color="white" />
-            </TouchableOpacity>
-            <View style={styles.yhh}>
-                <Text>Select Recipient</Text>
-                <RadioButtonGroup/>
-                {/* <Text style={{marginTop:20,fontWeight:'bold'}}>A new recipient</Text> */}
-            </View>
-            <View style={styles.box}>
-                <TextInput 
-                    placeholder="Enter Number..." 
-                    value={Number} 
-                    keyboardType ="numeric"
-                    maxLength={10}
+          <Text>Select Network </Text>
+          <TouchableOpacity onPress={toggleDrawer} style={styles.button}>
+            <Text style={[styles.text0, { color: "white" }]}>
+              {selectedNetwork}
+            </Text>
+            <FontAwesome5 name="angle-down" size={24} color="white" />
+          </TouchableOpacity>
+          <View style={styles.yhh}>
+            <Text>Select Recipient</Text>
+            <RadioButtonGroup />
+            {selectedNetwork === "Other networks (AT, Telecel)" && (
+              <View style={styles.box}>
+                <TextInput
+                  placeholder="Enter Number..."
+                  value={Number}
+                  keyboardType="numeric"
+                  maxLength={10}
                 />
                 <Pressable>
-                    <MaterialIcons style={{top:12}} name="contact-phone" size={24} color="black" />
+                  <MaterialIcons
+                    style={{ top: 12 }}
+                    name="contact-phone"
+                    size={24}
+                    color="black"
+                  />
                 </Pressable>
-            </View>
+              </View>
+            )}
+          </View>
+
           {/* <Text>Linked Broadband Accounts</Text>
             <Text style={styles.text}>No Linked Broadband Accounts</Text> */}
         </View>
@@ -83,26 +90,32 @@ const BuyAirtime = ({ navigation }) => {
         </View>
       </View>
       <Modal
-          animationType="pop-up"
-          transparent={true}
-          visible={isDrawerVisible}
-          onRequestClose={() => {
-            setIsDrawerVisible(false);
-          }}
-        >
-            <Pressable onPress={closeModal} style={styles.modalContainer}>
-                <Pressable style={styles.drawerContent} onPress={stopPropagation}>
-                    <TouchableOpacity onPress={()=>selectNetwork('MTN')} style={styles.button0}>
-                        <View style={[styles.dot,{backgroundColor:'yellow'}]}></View>
-                        <Text style={styles.text0}>MTN</Text>
-                    </TouchableOpacity>
+        animationType="pop-up"
+        transparent={true}
+        visible={isDrawerVisible}
+        onRequestClose={() => {
+          setIsDrawerVisible(false);
+        }}
+      >
+        <Pressable onPress={closeModal} style={styles.modalContainer}>
+          <Pressable style={styles.drawerContent} onPress={stopPropagation}>
+            <TouchableOpacity
+              onPress={() => selectNetwork("MTN")}
+              style={styles.button0}
+            >
+              <View style={[styles.dot, { backgroundColor: "yellow" }]}></View>
+              <Text style={styles.text0}>MTN</Text>
+            </TouchableOpacity>
 
-                    <TouchableOpacity onPress={()=>selectNetwork('Other networks (AT, Telecel)')} style={[styles.button0, {borderBottomWidth:0}]}>
-                        <View style={[styles.dot, {backgroundColor:'pink'}]}></View>
-                        <Text style={styles.text0}>Other networks (AT, Telecel)</Text>
-                    </TouchableOpacity>
-                </Pressable>
-            </Pressable>
+            <TouchableOpacity
+              onPress={() => selectNetwork("Other networks (AT, Telecel)")}
+              style={[styles.button0, { borderBottomWidth: 0 }]}
+            >
+              <View style={[styles.dot, { backgroundColor: "pink" }]}></View>
+              <Text style={styles.text0}>Other networks (AT, Telecel)</Text>
+            </TouchableOpacity>
+          </Pressable>
+        </Pressable>
       </Modal>
     </View>
   );
@@ -173,13 +186,13 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
   },
   button0: {
-    height:41,
-    borderBottomWidth:StyleSheet.hairlineWidth,
-    borderBottomColor:'grey',
-    paddingLeft:20,
-    alignItems:'center',
-    flexDirection:'row',
-   },
+    height: 41,
+    borderBottomWidth: StyleSheet.hairlineWidth,
+    borderBottomColor: "grey",
+    paddingLeft: 20,
+    alignItems: "center",
+    flexDirection: "row",
+  },
   button: {
     height: 40,
     width: "auto",
@@ -195,17 +208,17 @@ const styles = StyleSheet.create({
   },
   modalContainer: {
     flex: 1,
-    justifyContent: 'flex-start',
-    backgroundColor: 'rgba(0, 0, 0, 0)',
+    justifyContent: "flex-start",
+    backgroundColor: "rgba(0, 0, 0, 0)",
   },
   drawerContent: {
-    backgroundColor: 'white',
-    height:"11%",
-    width: 'auto',
+    backgroundColor: "white",
+    height: "11%",
+    width: "auto",
     borderRadius: 20,
-    marginLeft:20,
-    marginRight:20,
-    top:227,
+    marginLeft: 20,
+    marginRight: 20,
+    top: 227,
     // Shadow properties
     shadowColor: "#000", // Shadow color
     shadowOffset: { width: 3, height: 3 }, // Shadow offset
@@ -213,26 +226,26 @@ const styles = StyleSheet.create({
     shadowRadius: 5, // Shadow blur radius
     elevation: 5, // Android shadow
   },
-  dot:{
-    height:20,
-    width:20,
-    borderRadius:100,
-    borderWidth:1,
-    marginRight:10,
+  dot: {
+    height: 20,
+    width: 20,
+    borderRadius: 100,
+    borderWidth: 1,
+    marginRight: 10,
   },
-  box:{
-    height:55,
-    width:'auto',
-    borderWidth:StyleSheet.hairlineWidth,
-    justifyContent:'space-between',
-    paddingLeft:20,
-    paddingRight:20,
-    flexDirection:'row',
-    marginBottom:20,
-    borderRadius:5,
-    borderColor:'grey'
+  box: {
+    height: 55,
+    width: "auto",
+    borderWidth: StyleSheet.hairlineWidth,
+    justifyContent: "space-between",
+    paddingLeft: 20,
+    paddingRight: 20,
+    flexDirection: "row",
+    marginBottom: 20,
+    borderRadius: 5,
+    borderColor: "grey",
   },
-  yhh:{
+  yhh: {
     //borderTopWidth: StyleSheet.hairlineWidth,
     borderColor: "grey",
     //marginBottom:20,
