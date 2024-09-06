@@ -48,6 +48,14 @@ const RadioButton2Group = () => {
           onSelect={setSelectedValue}
         />
       </TouchableOpacity>
+      {selectedValue ==="option1" && (
+        <View style={styles.box}>
+          <Text style={styles.text}>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Suspendisse varius enim in eros elementum tristique.
+          </Text>
+        </View>
+      )}
     </View>
   );
 };
@@ -89,6 +97,10 @@ const styles = StyleSheet.create({
     height: '100%',
     width: '15%',
     backgroundColor: '#292a2e',
+  },
+  box:{
+    position:'absolute',
+    top:90,
   },
 });
 
