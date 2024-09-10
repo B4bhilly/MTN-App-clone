@@ -23,6 +23,10 @@ const DataBundleScreen = ({navigation}) => {
         navigation.navigate('Others');
     };
 
+    const handleNavigationToReview =() =>{
+        navigation.navigate('Review');
+    };
+
   return (
     <View style={styles.container}>
         <View style={styles.red}>
@@ -33,7 +37,7 @@ const DataBundleScreen = ({navigation}) => {
         </View>
         <View style={styles.one}>
             <Text>Buy Again</Text>
-            <TouchableOpacity style={styles.tab2}>
+            <TouchableOpacity onPress={handleNavigationToReview} style={styles.tab2}>
                 <View style={{marginBottom:'auto'}}>
                     <View style={styles.hi1}>
                         <Text style={styles.pad1}>Data Bundle</Text>

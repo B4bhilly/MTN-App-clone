@@ -92,8 +92,8 @@ const Review = ({ navigation }) => {
           </View>
           {selectedValue === "option1" && (
             <View style={styles.box}>
-              <Text style={styles.text}>
-                *Get +50% when you pay with Momo only on a 4G Device
+              <Text style={{fontSize:12}}>
+                *Get <Text style={styles.text}>+50%</Text> when you pay with Momo only on a 4G Device
               </Text>
             </View>
           )}
@@ -188,6 +188,7 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     backgroundColor: "white",
     overflow: "hidden",
+    margin:0,
     // Shadow properties
     shadowColor: "#000", // Shadow color
     shadowOffset: { width: 3, height: 3 }, // Shadow offset

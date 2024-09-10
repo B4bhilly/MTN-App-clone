@@ -1,12 +1,4 @@
-import {
-  StyleSheet,
-  Text,
-  View,
-  TouchableOpacity,
-  Modal,
-  Pressable,
-  TextInput,
-} from "react-native";
+import {StyleSheet, Text, View, TouchableOpacity, Modal, Pressable, TextInput,} from "react-native";
 import React, { useState } from "react";
 import { AntDesign, FontAwesome5, MaterialIcons } from "@expo/vector-icons";
 import RadioButtonGroup from "../../assets/CustomTabs/RadioButton1";
@@ -218,7 +210,7 @@ const styles = StyleSheet.create({
     borderRadius: 20,
     marginLeft: 20,
     marginRight: 20,
-    top: 227,
+    top: 205,
     // Shadow properties
     shadowColor: "#000", // Shadow color
     shadowOffset: { width: 3, height: 3 }, // Shadow offset
