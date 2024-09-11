@@ -4,6 +4,9 @@ import { AntDesign, Ionicons, MaterialIcons, Octicons, Entypo } from '@expo/vect
 
 
 const SocialScreen = ({navigation}) => {
+    const handleNavigationToBuy1 = () =>{
+        navigation.navigate('Buy1')
+    };
   return (
     <View style={styles.container}>
         <View style={styles.red}>
@@ -44,7 +47,7 @@ const SocialScreen = ({navigation}) => {
                     </View>
                 </TouchableOpacity>
 
-                <TouchableOpacity style={styles.tab2}>
+                <TouchableOpacity onPress={handleNavigationToBuy1} style={styles.tab2}>
                     <View style={{marginBottom:'auto'}}>
                         <View style={styles.hi1}>
                             <Text style={styles.pad1}>Social Bundle</Text>
@@ -73,7 +76,7 @@ const SocialScreen = ({navigation}) => {
                     </View>
                 </TouchableOpacity>
 
-                <TouchableOpacity style={styles.tab2}>
+                <TouchableOpacity onPress={handleNavigationToBuy1} style={styles.tab2}>
                     <View style={{marginBottom:'auto'}}>
                         <View style={styles.hi1}>
                             <Text style={styles.pad1}>Social Bundle</Text>
@@ -102,7 +105,7 @@ const SocialScreen = ({navigation}) => {
                     </View>
                 </TouchableOpacity>
 
-                <TouchableOpacity style={styles.tab2}>
+                <TouchableOpacity onPress={handleNavigationToBuy1} style={styles.tab2}>
                     <View style={{marginBottom:'auto'}}>
                         <View style={styles.hi1}>
                             <Text style={styles.pad1}>Social Bundle</Text>

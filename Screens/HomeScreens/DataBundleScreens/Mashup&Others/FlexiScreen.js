@@ -1,8 +1,13 @@
 import { StyleSheet, Text, View, TouchableOpacity } from "react-native";
 import React from "react";
 import { AntDesign, Ionicons, MaterialIcons, Entypo } from "@expo/vector-icons";
+import { useNavigation } from "@react-navigation/native";
 
 const FlexiScreen = () => {
+  const navigation = useNavigation();
+  const handleNavigationToBuy1 = () =>{
+    navigation.navigate('Buy1');
+};
   return (
     <View style={styles.container}>
       <View style={styles.one}>
@@ -43,7 +48,7 @@ const FlexiScreen = () => {
             </View>
           </TouchableOpacity>
 
-          <TouchableOpacity style={styles.tab2}>
+          <TouchableOpacity onPress={handleNavigationToBuy1} style={styles.tab2}>
             <View style={{ marginBottom: "auto" }}>
               <View style={styles.hi1}>
                 <Text style={styles.pad1}>GHS 30 Mashup</Text>
@@ -72,15 +77,6 @@ const FlexiScreen = () => {
             </View>
           </TouchableOpacity>
         </View>
-        <View
-          style={{
-            backgroundColor: "#ebf5f3",
-            flex: 1,
-            height: "100%",
-            width: "100%",
-            marginTop: 20,
-          }}
-        ></View>
       </View>
     </View>
   );

@@ -1,8 +1,14 @@
 import {StyleSheet,Text,View,TouchableOpacity, ScrollView,} from "react-native";
 import React from "react";
 import { AntDesign, Ionicons, MaterialIcons, Entypo } from "@expo/vector-icons";
+import { useNavigation } from '@react-navigation/native';
 
 const GhsFiveScreen = () => {
+  const navigation = useNavigation();
+
+  const handleNavigationToBuy1 = () =>{
+    navigation.navigate('Buy1');
+  };
   return (
     <View style={styles.container}>
       <ScrollView showsVerticalScrollIndicator={false} style={styles.one}>
@@ -10,7 +16,7 @@ const GhsFiveScreen = () => {
           Customize a mix of data and voice with a free social package too.
         </Text>
         <View style={styles.roll}>
-          <TouchableOpacity style={styles.tab2}>
+          <TouchableOpacity onPress={handleNavigationToBuy1} style={styles.tab2}>
             <View style={{ marginBottom: "auto" }}>
               <View style={styles.hi1}>
                 <Text style={styles.pad1}>GHS 5 Mashup</Text>
@@ -39,7 +45,7 @@ const GhsFiveScreen = () => {
             </View>
           </TouchableOpacity>
 
-          <TouchableOpacity style={styles.tab2}>
+          <TouchableOpacity onPress={handleNavigationToBuy1} style={styles.tab2}>
             <View style={{ marginBottom: "auto" }}>
               <View style={styles.hi1}>
                 <Text style={styles.pad1}>GHS 5 Mashup</Text>
@@ -68,7 +74,7 @@ const GhsFiveScreen = () => {
             </View>
           </TouchableOpacity>
 
-          <TouchableOpacity style={styles.tab2}>
+          <TouchableOpacity onPress={handleNavigationToBuy1} style={styles.tab2}>
             <View style={{ marginBottom: "auto" }}>
               <View style={styles.hi1}>
                 <Text style={styles.pad1}>GHS 5 Mashup</Text>
@@ -97,7 +103,7 @@ const GhsFiveScreen = () => {
             </View>
           </TouchableOpacity>
 
-          <TouchableOpacity style={styles.tab2}>
+          <TouchableOpacity onPress={handleNavigationToBuy1} style={styles.tab2}>
             <View style={{ marginBottom: "auto" }}>
               <View style={styles.hi1}>
                 <Text style={styles.pad1}>GHS 5 Mashup</Text>
@@ -126,7 +132,7 @@ const GhsFiveScreen = () => {
             </View>
           </TouchableOpacity>
 
-          <TouchableOpacity style={styles.tab2}>
+          <TouchableOpacity onPress={handleNavigationToBuy1} style={styles.tab2}>
             <View style={{ marginBottom: "auto" }}>
               <View style={styles.hi1}>
                 <Text style={styles.pad1}>GHS 5 Mashup</Text>
