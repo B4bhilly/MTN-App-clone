@@ -1,9 +1,14 @@
 import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
 import React from 'react';
 import { AntDesign, Ionicons, MaterialCommunityIcons, Entypo } from "@expo/vector-icons";
-
+import { useNavigation } from '@react-navigation/native';
 
 const KokrokooScreen = () => {
+  const navigation = useNavigation();
+
+  const handleNavigationToBuy1 = () =>{
+    navigation.navigate("Buy1");
+  };
   return (
     <View style={styles.container}>
       <View style={styles.one}>
@@ -12,7 +17,7 @@ const KokrokooScreen = () => {
         </Text>
         <View style={styles.roll}>
 
-          <TouchableOpacity style={styles.tab2}>
+          <TouchableOpacity onPress={handleNavigationToBuy1} style={styles.tab2}>
             <View style={{ marginBottom: "auto" }}>
               <View style={styles.hi1}>
                 <Text style={styles.pad1}>400MB Kokrokoo Bundles</Text>
