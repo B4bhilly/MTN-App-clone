@@ -77,7 +77,7 @@ const SendMomoScreen = ({ navigation }) => {
 
       <View style={styles.butt}>
         <TouchableOpacity style={styles.button1}>
-          <Text style={styles.text}>NEXt</Text>
+          <Text style={styles.text}>NEXT</Text>
         </TouchableOpacity>
       </View>
 
