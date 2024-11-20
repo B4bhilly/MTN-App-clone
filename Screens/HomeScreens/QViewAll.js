@@ -8,7 +8,7 @@ import {
   MaterialCommunityIcons,
   Octicons,
   FontAwesome6,
-  FontAwesome
+  FontAwesome,
 } from "@expo/vector-icons";
 
 const QViewAll = ({ navigation }) => {
@@ -28,12 +28,12 @@ const QViewAll = ({ navigation }) => {
     navigation.navigate("MashUp");
   };
 
-  const handleNavigationToMore =() =>{
-    navigation.navigate('More');
+  const handleNavigationToMore = () => {
+    navigation.navigate("More");
   };
 
-  const handleNavigationToHistory =() =>{
-    navigation.navigate('History');
+  const handleNavigationToHistory = () => {
+    navigation.navigate("History");
   };
 
   return (
@@ -50,7 +50,7 @@ const QViewAll = ({ navigation }) => {
         <Text style={styles.yoo}>Homepage Quick Access</Text>
         <View style={{ paddingLeft: 20, paddingRight: 20 }}>
           <View style={styles.man}>
-            <TouchableOpacity
+            {/* <TouchableOpacity
               onPress={handleNavigationToBundle}
               style={styles.black}
             >
@@ -72,10 +72,43 @@ const QViewAll = ({ navigation }) => {
                    <MaterialCommunityIcons name="star" size={24} color="black" />
                 </View>
               <Text style={styles.yhh}>Just4U</Text>
+            </TouchableOpacity> */}
+            <TouchableOpacity
+              onPress={handleNavigationToBundle}
+              style={[
+                styles.black,
+                { justifyContent: "center", paddingLeft: 0 },
+              ]}
+            >
+              <MaterialCommunityIcons
+                name="play-circle-outline"
+                size={24}
+                color="yellow"
+              />
+              <Text
+                style={[styles.yhh, { fontSize: 22, fontWeight: "normal" }]}
+              >
+                <Text style={{ fontWeight: "bold" }}>MTN</Text>PLAY
+              </Text>
+            </TouchableOpacity>
+
+            <TouchableOpacity
+              onPress={handleNavigationToJust4U}
+              style={[
+                styles.black,
+                { justifyContent: "center", paddingLeft: 0 },
+              ]}
+            >
+              {/* <View style={styles.circle}>
+                   <MaterialCommunityIcons name="star" size={24} color="black" />
+                  </View> */}
+              <Text style={styles.yhh1}>
+                <Text style={{ color: "yellow" }}>MTN</Text>PULSE
+              </Text>
             </TouchableOpacity>
           </View>
 
-          <View style={styles.man1}>
+          {/* <View style={styles.man1}>
             <TouchableOpacity
               onPress={handleNavigationToSendMomo}
               style={styles.black}
@@ -99,58 +132,96 @@ const QViewAll = ({ navigation }) => {
                 </View>
               <Text style={styles.yhh}>MashUp</Text>
             </TouchableOpacity>
-          </View>
+          </View> */}
         </View>
         <Text style={styles.yoo}>Other Actions</Text>
         <View style={{ paddingLeft: 20, paddingRight: 20 }}>
           <View style={styles.man}>
             <TouchableOpacity
-              style={styles.black}
+              onPress={handleNavigationToBundle}
+              style={styles.black1}
             >
-                <View style={styles.circle}>
-                    <FontAwesome name="gamepad" size={22} color="black" />
-                </View>
-              <Text style={styles.yhh}>Play</Text>
+                <MaterialCommunityIcons
+                  name="swap-vertical"
+                  size={40}
+                  color="white"
+                />
+              <Text style={styles.yhh}>Data Bundle</Text>
             </TouchableOpacity>
 
             <TouchableOpacity
-              style={styles.black}
+              onPress={handleNavigationToJust4U}
+              style={styles.black1}
             >
-                <View style={styles.circle}>
-                    <MaterialIcons name="perm-contact-cal" size={23} color="black" />
-                </View>
-              <Text style={styles.yhh}>Contact us</Text>
+              <MaterialCommunityIcons name="star" size={40} color="white" />
+              <Text style={styles.yhh}>Just4U</Text>
+            </TouchableOpacity>
+
+            <TouchableOpacity
+              onPress={handleNavigationToSendMomo}
+              style={styles.black1}
+            >
+                <FontAwesome6
+                  name="circle-dollar-to-slot"
+                  size={40}
+                  color="white"
+                />
+              <Text style={styles.yhh}>Send Momo</Text>
+            </TouchableOpacity>
+
+            <TouchableOpacity
+              onPress={handleNavigationToMashUp}
+              style={styles.black1}
+            >
+              <Octicons name="database" size={40} color="white" />
+              <Text style={styles.yhh}>MashUp</Text>
             </TouchableOpacity>
           </View>
 
           <View style={[styles.man1, { borderBottomWidth: 0 }]}>
+            <TouchableOpacity style={styles.black1}>
+              <View style={styles.circle}>
+                <FontAwesome name="gamepad" size={22} color="black" />
+              </View>
+              <Text style={styles.yhh}>Play</Text>
+            </TouchableOpacity>
+
+            <TouchableOpacity style={styles.black1}>
+              <View style={styles.circle}>
+                <MaterialIcons
+                  name="perm-contact-cal"
+                  size={23}
+                  color="black"
+                />
+              </View>
+              <Text style={styles.yhh}>Contact us</Text>
+            </TouchableOpacity>
+
             <TouchableOpacity
               onPress={handleNavigationToHistory}
-              style={styles.black}
+              style={styles.black1}
             >
-                <View style={styles.circle}>
-                    <MaterialIcons name="history" size={24} color="black" />
-                </View>
+              <View style={styles.circle}>
+                <MaterialIcons name="history" size={24} color="black" />
+              </View>
               <Text style={styles.yhh}>History</Text>
             </TouchableOpacity>
 
             <TouchableOpacity
               onPress={handleNavigationToMore}
-              style={[styles.black, { marginBottom: 10}]}
+              style={[styles.black1, { marginBottom: 10 }]}
             >
-                <View style={styles.circle}>
-                    <MaterialIcons name="feedback" size={22} color="black" />
-                </View>
+              <View style={styles.circle}>
+                <MaterialIcons name="feedback" size={22} color="black" />
+              </View>
               <Text style={styles.yhh}>Feedback</Text>
             </TouchableOpacity>
           </View>
-          <View style={{paddingLeft:5}}>
-            <TouchableOpacity
-              style={styles.black}
-            >
-                <View style={styles.circle}>
-                    <MaterialIcons name="library-music" size={22} color="black" />
-                </View>
+          <View style={{ paddingLeft: 5 }}>
+            <TouchableOpacity style={styles.black1}>
+              <View style={styles.circle}>
+                <MaterialIcons name="library-music" size={22} color="black" />
+              </View>
               <Text style={styles.yhh}>Caller Tunez</Text>
             </TouchableOpacity>
           </View>
@@ -211,16 +282,33 @@ const styles = StyleSheet.create({
     paddingLeft: 15,
     flexDirection: "row",
   },
-  circle:{
-    height:30,
-    width:30,
-    backgroundColor:'white',
-    borderRadius:100,
+  black1: {
+    backgroundColor: "#292a2e",
+    height: 75,
+    width: 75,
+    marginRight: 10,
+    borderRadius: 10,
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  circle: {
+    height: 30,
+    width: 30,
+    backgroundColor: "white",
+    borderRadius: 100,
     alignItems: "center",
     justifyContent: "center",
   },
   yhh: {
     color: "white",
-    paddingLeft: 10,
+    paddingLeft: 5,
+    fontSize: 10,
+    fontWeight: "bold",
+  },
+  yhh1: {
+    color: "white",
+    //paddingLeft: 10,
+    fontWeight: "bold",
+    fontSize: 22,
   },
 });

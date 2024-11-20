@@ -246,7 +246,7 @@ const MomoScreen = ({ navigation }) => {
               {code.map((digit, index) => (
                 <TextInput
                   key={index}
-                  style={[styles.pin, { width: 70, textAlign: "center" }]} // Customized width for 2FA input boxes
+                  style={[styles.pin, { width: 70, height:50, textAlign: "center" }]} // Customized width for 2FA input boxes
                   keyboardType="numeric"
                   maxLength={1}
                   onChangeText={(text) => handleChange(text, index)}
@@ -313,7 +313,7 @@ const styles = StyleSheet.create({
   modalContainer: {
     flex: 1,
     justifyContent: "flex-start",
-    backgroundColor: "rgba(0, 0, 0, 0.5)",
+    backgroundColor: "rgba(0, 0, 0, 0.3)",
   },
   drawerContent: {
     backgroundColor: "#ebf5f3",
@@ -339,7 +339,7 @@ const styles = StyleSheet.create({
   pin: {
     borderWidth: 2,
     borderColor: "grey",
-    padding: 10,
+    //padding: 10,
     borderRadius: 5,
     marginBottom: 10,
     marginTop: 10,

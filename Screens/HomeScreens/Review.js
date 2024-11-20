@@ -1,9 +1,14 @@
 import { StyleSheet, Text, View, TouchableOpacity } from "react-native";
 import React, { useState } from "react";
 import { AntDesign, FontAwesome5, MaterialIcons } from "@expo/vector-icons";
+import ApprovalScreen from "./ApprovalScreen";
 
 const Review = ({ navigation }) => {
   const [selectedValue, setSelectedValue] = useState("option1");
+
+  const handleNavigationToApproval = () => {
+    navigation.navigate("Approval");
+  };
 
   // RadioButton2 Component
   const RadioButton2 = ({ label, value, selected }) => {
@@ -104,7 +109,7 @@ const Review = ({ navigation }) => {
           <Text style={styles.text}>CANCEL</Text>
         </TouchableOpacity>
 
-        <TouchableOpacity style={styles.button1}>
+        <TouchableOpacity onPress={handleNavigationToApproval} style={styles.button1}>
           <Text style={styles.text}>PAY</Text>
         </TouchableOpacity>
       </View>

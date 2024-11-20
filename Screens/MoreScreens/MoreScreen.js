@@ -121,7 +121,7 @@ const MoreScreen = ({navigation}) => {
             </View>
             
             <View style={{alignItems:'center',justifyContent:'center',marginBottom:40,}}>
-              <Text style={{color:'grey',marginBottom:10}}>App Version</Text>
+              <Text style={{color:'grey',marginBottom:10}}>App Version 2.0.1 11111</Text>
               <TouchableOpacity style={[styles.two, {width:120}]}>
                 <SimpleLineIcons style={{marginRight:15}} name="logout" size={14} color="black" />
                 <Text style={styles.bold}>LOGOUT</Text>

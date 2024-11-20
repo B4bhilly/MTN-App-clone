@@ -27,6 +27,8 @@ import BViewAll from '../../../Screens/HomeScreens/BViewAll';
 import QViewAll from '../../../Screens/HomeScreens/QViewAll';
 import Review from '../../../Screens/HomeScreens/Review';
 import BuyAirtime1 from '../../../Screens/HomeScreens/BuyAirtime1';
+import ApprovalScreen from '../../../Screens/HomeScreens/ApprovalScreen';
+import ShopScreen from '../../../Screens/ShopScreens/ShopScreen';
 
 
 const Stack = createNativeStackNavigator();
@@ -37,6 +39,7 @@ const MainStackNavigator = () => {
       <Stack.Navigator>
         <Stack.Screen name="MainTabs" component={MainTabNavigator} options={{ headerShown: false }} />
         <Stack.Screen name="Home" component={HomeScreen} options={{headerShown:false}}/>
+        <Stack.Screen name="Shop" component={ShopScreen} options={{headerShown:false}}/>
         <Stack.Screen name="DBNavigator" component={DBNavigator} options={{headerShown:false}}/>
         <Stack.Screen name="Airtime" component={AirtimeScreen} options={{headerShown:false}}/>
         <Stack.Screen name="Data" component={DataScreen} options={{headerShown:false}}/>
@@ -61,6 +64,9 @@ const MainStackNavigator = () => {
         <Stack.Screen name="QView" component={QViewAll} options={{headerShown:false}}/>
         <Stack.Screen name="Review" component={Review} options={{headerShown:false}}/>
         <Stack.Screen name="Buy1" component={BuyAirtime1} options={{headerShown:false}}/>
+        <Stack.Screen name='Approval' component={ApprovalScreen} options={{headerShown:false}}/>
+        <Stack.Screen name="MainTab" component={MainTabNavigator} options={{headerShown:false}}/>
+
       </Stack.Navigator>
     </NavigationContainer>
   );

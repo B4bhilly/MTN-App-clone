@@ -1,21 +1,35 @@
-import {ScrollView, StyleSheet, Text, View, TouchableOpacity,} from "react-native";
+import {
+  ScrollView,
+  StyleSheet,
+  Text,
+  View,
+  TouchableOpacity,
+} from "react-native";
 import React from "react";
-import {Ionicons, Feather, AntDesign, MaterialIcons, MaterialCommunityIcons, Octicons, FontAwesome6,} from "@expo/vector-icons";
+import {
+  Ionicons,
+  Feather,
+  AntDesign,
+  MaterialIcons,
+  MaterialCommunityIcons,
+  Octicons,
+  FontAwesome6,
+} from "@expo/vector-icons";
 
 const HomeScreen = ({ navigation }) => {
   // Get the current date and time
   const currentDateTime = new Date().toLocaleString();
 
   const handleNavigationToAirtime = () => {
-    navigation.navigate("DBNavigator",{initialTab:'Airtime'});
+    navigation.navigate("DBNavigator", { initialTab: "Airtime" });
   };
 
   const handleNavigationToData = () => {
-    navigation.navigate("DBNavigator",{initialTab:'Data'});
+    navigation.navigate("DBNavigator", { initialTab: "Data" });
   };
 
   const handleNavigationToSMS = () => {
-    navigation.navigate("DBNavigator",{initialTab:'SMS'});
+    navigation.navigate("DBNavigator", { initialTab: "SMS" });
   };
 
   const handleNavigationToBundle = () => {
@@ -26,24 +40,24 @@ const HomeScreen = ({ navigation }) => {
     navigation.navigate("Just4U");
   };
 
-  const handleNavigationToSendMomo = () =>{
+  const handleNavigationToSendMomo = () => {
     navigation.navigate("SendMomo");
   };
 
-  const handleNavigationToMashUp = () =>{
-    navigation.navigate('MashUp');
+  const handleNavigationToMashUp = () => {
+    navigation.navigate("MashUp");
   };
 
-  const handleNavigationToBView =() =>{
-    navigation.navigate('BView');
+  const handleNavigationToBView = () => {
+    navigation.navigate("BView");
   };
 
-  const handleNavigationToQView =() =>{
-    navigation.navigate('QView');
+  const handleNavigationToQView = () => {
+    navigation.navigate("QView");
   };
 
-  const handleNavigationToReview =() =>{
-    navigation.navigate('Review');
+  const handleNavigationToReview = () => {
+    navigation.navigate("Review");
   };
 
   return (
@@ -59,7 +73,10 @@ const HomeScreen = ({ navigation }) => {
                 <AntDesign name="sync" size={12} color="black" />
               </View>
 
-              <TouchableOpacity onPress={handleNavigationToBView} style={styles.title}>
+              <TouchableOpacity
+                onPress={handleNavigationToBView}
+                style={styles.title}
+              >
                 <Text style={styles.pad}>View all</Text>
                 <AntDesign name="rightcircle" size={14} color="black" />
               </TouchableOpacity>
@@ -178,7 +195,10 @@ const HomeScreen = ({ navigation }) => {
                 <Text style={{ fontSize: 18 }}>Quick Access</Text>
               </View>
 
-              <TouchableOpacity onPress={handleNavigationToQView} style={styles.title}>
+              <TouchableOpacity
+                onPress={handleNavigationToQView}
+                style={styles.title}
+              >
                 <Text style={styles.pad}>View all</Text>
                 <AntDesign name="rightcircle" size={14} color="black" />
               </TouchableOpacity>
@@ -186,7 +206,7 @@ const HomeScreen = ({ navigation }) => {
 
             <View>
               <View style={styles.man}>
-                <TouchableOpacity
+                {/* <TouchableOpacity
                   onPress={handleNavigationToBundle}
                   style={styles.black}
                 >
@@ -198,9 +218,43 @@ const HomeScreen = ({ navigation }) => {
                     />
                   </View>
                   <Text style={styles.yhh}>Data Bundle</Text>
+                </TouchableOpacity> */}
+
+                <TouchableOpacity
+                  onPress={handleNavigationToBundle}
+                  style={[
+                    styles.black,
+                    { justifyContent: "center", paddingLeft: 0 },
+                  ]}
+                >
+                  <MaterialCommunityIcons
+                    name="play-circle-outline"
+                    size={24}
+                    color="yellow"
+                  />
+                  <Text
+                    style={[styles.yhh, { fontSize: 22, fontWeight: "normal" }]}
+                  >
+                    <Text style={{ fontWeight: "bold" }}>MTN</Text>PLAY
+                  </Text>
                 </TouchableOpacity>
 
                 <TouchableOpacity
+                  onPress={handleNavigationToJust4U}
+                  style={[
+                    styles.black,
+                    { justifyContent: "center", paddingLeft: 0 },
+                  ]}
+                >
+                  {/* <View style={styles.circle}>
+                   <MaterialCommunityIcons name="star" size={24} color="black" />
+                  </View> */}
+                  <Text style={styles.yhh1}>
+                    <Text style={{ color: "yellow" }}>MTN</Text>PULSE
+                  </Text>
+                </TouchableOpacity>
+
+                {/* <TouchableOpacity
                   onPress={handleNavigationToJust4U}
                   style={styles.black}
                 >
@@ -208,26 +262,41 @@ const HomeScreen = ({ navigation }) => {
                    <MaterialCommunityIcons name="star" size={24} color="black" />
                   </View>
                   <Text style={styles.yhh}>Just4U</Text>
-                </TouchableOpacity>
+                </TouchableOpacity> */}
               </View>
 
               <View style={styles.man1}>
-                <TouchableOpacity onPress={handleNavigationToSendMomo} style={styles.black}>
-                  <View style={styles.circle}>
-                    <FontAwesome6
-                      name="circle-dollar-to-slot"
-                      size={20}
-                      color="black"
-                    />
-                  </View>
-                  <Text style={styles.yhh}>Send Momo</Text>
+                <TouchableOpacity
+                  onPress={handleNavigationToBundle}
+                  style={styles.black1}
+                >
+                  <MaterialIcons name="swap-vert" size={40} color="white" />
+                  <Text style={styles.yhh}>Data Bundle</Text>
                 </TouchableOpacity>
 
-                <TouchableOpacity onPress={handleNavigationToMashUp} style={styles.black}>
-                  <View style={styles.circle}>
-                    <Octicons name="database" size={22} color="black" />
-                  </View>
+                <TouchableOpacity
+                  onPress={handleNavigationToJust4U}
+                  style={styles.black1}
+                >
+                  <MaterialCommunityIcons name="star" size={40} color="white" />
+                  <Text style={styles.yhh}>Just4U</Text>
+                </TouchableOpacity>
+
+                <TouchableOpacity
+                  onPress={handleNavigationToMashUp}
+                  style={styles.black1}
+                >
+                  <Feather name="database" size={40} color="white" />
                   <Text style={styles.yhh}>MashUp</Text>
+                </TouchableOpacity>
+
+                <TouchableOpacity style={styles.black1}>
+                    <MaterialIcons
+                      name="perm-contact-cal"
+                      size={40}
+                      color="white"
+                    />
+                  <Text style={styles.yhh}>Contact us</Text>
                 </TouchableOpacity>
               </View>
 
@@ -237,7 +306,10 @@ const HomeScreen = ({ navigation }) => {
                 </Text>
               </View>
 
-              <TouchableOpacity onPress={handleNavigationToReview} style={styles.tab2}>
+              <TouchableOpacity
+                onPress={handleNavigationToReview}
+                style={styles.tab2}
+              >
                 <View style={{ marginBottom: "auto" }}>
                   <View style={styles.hi1}>
                     <Text style={styles.pad1}>Data Bundle</Text>
@@ -409,18 +481,19 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     paddingLeft: 20,
     padding: 10,
-    justifyContent:'center',
+    justifyContent: "center",
   },
   man1: {
     flexDirection: "row",
     paddingLeft: 10,
+    paddingRight:0,
     marginBottom: 40,
-    justifyContent:'center',    
+    justifyContent: "center",
   },
   black: {
     backgroundColor: "#292a2e",
     height: 55,
-    width: 150,
+    width: 160,
     marginRight: 10,
     borderRadius: 10,
     alignItems: "center",
@@ -428,17 +501,32 @@ const styles = StyleSheet.create({
     paddingLeft: 15,
     flexDirection: "row",
   },
-  circle:{
-    height:30,
-    width:30,
-    backgroundColor:'white',
-    borderRadius:100,
+  black1: {
+    backgroundColor: "#292a2e",
+    height: 75,
+    width: 75,
+    marginRight: 10,
+    borderRadius: 10,
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  circle: {
+    height: 30,
+    width: 30,
+    backgroundColor: "white",
+    borderRadius: 100,
     alignItems: "center",
     justifyContent: "center",
   },
   yhh: {
     color: "white",
-    paddingLeft: 10,
+    fontSize: 10,
+    fontWeight: "bold",
+  },
+  yhh1: {
+    color: "white",
+    fontWeight: "bold",
+    fontSize: 22,
   },
   meat: {
     backgroundColor: "white",
