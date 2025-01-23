@@ -81,7 +81,7 @@ const HomeScreen = ({ navigation }) => {
                 <AntDesign name="rightcircle" size={14} color="black" />
               </TouchableOpacity>
             </View>
-            <View style={{ padding: 10, flexDirection: "row" }}>
+            <View style={{ padding: 10, flexDirection: "row",justifyContent:'center' }}>
               <TouchableOpacity
                 onPress={handleNavigationToAirtime}
                 style={styles.tab}
@@ -133,7 +133,7 @@ const HomeScreen = ({ navigation }) => {
               </TouchableOpacity>
             </View>
 
-            <View style={{ padding: 10, flexDirection: "row" }}>
+            <View style={{ padding: 10, flexDirection: "row",justifyContent:'center' }}>
               <TouchableOpacity
                 onPress={handleNavigationToSMS}
                 style={styles.tab}
@@ -380,12 +380,13 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   tab: {
-    height: 100,
-    width: 150,
+    height: 115,
+    width: 160,
     backgroundColor: "#ebe41c",
     borderRadius: 10,
     margin: 10,
-    overflow: "hidden",
+    //overflow: "hidden",
+    marginBottom:5,
     // Shadow properties
     shadowColor: "#000", // Shadow color
     shadowOffset: { width: 3, height: 3 }, // Shadow offset
@@ -394,14 +395,19 @@ const styles = StyleSheet.create({
     elevation: 5, // Android shadow
   },
   tab1: {
-    height: "65%",
+    height: 65,
+    width:'auto',
     backgroundColor: "white",
     alignContent: "flex-end",
     margin: 1.5,
+    // marginLeft:3,
+    // marginRight:3,
+    // marginBottom:2,
     borderTopLeftRadius: 15,
     borderBottomRightRadius: 10,
     borderBottomLeftRadius: 10,
     padding: 8,
+    //marginBottom:20,
   },
   tab01: {
     height: "55%",

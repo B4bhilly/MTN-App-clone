@@ -38,7 +38,7 @@ const DataBundleScreen = ({navigation}) => {
         <View style={styles.one}>
             <Text>Buy Again</Text>
             <TouchableOpacity onPress={handleNavigationToReview} style={styles.tab2}>
-                <View style={{marginBottom:'auto'}}>
+                <View style={{marginBottom:1}}>
                     <View style={styles.hi1}>
                         <Text style={styles.pad1}>Data Bundle</Text>
                         <View style={styles.meat}>
@@ -141,7 +141,7 @@ const styles = StyleSheet.create({
         borderTopLeftRadius:20,
     },
     tab01:{
-        height:'55%',
+        height:57,
         backgroundColor:'white',
         alignContent:'flex-end',
         margin:1.5,
@@ -154,7 +154,7 @@ const styles = StyleSheet.create({
         width:'auto',
     },
     tab2:{
-        height: 100,
+        height: 115,
         width: '100%',
         backgroundColor:'#ebe41c',
         borderRadius:10,
@@ -163,7 +163,7 @@ const styles = StyleSheet.create({
     },
     hi1:{
         padding:15,
-        //paddingLeft:20,
+        paddingBottom:20,
         flexDirection:'row',
         alignItems:'center',
         justifyContent:'center',

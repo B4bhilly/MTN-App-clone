@@ -17,8 +17,10 @@
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#ffffff"
-      }
+        "backgroundColor": "#ffffff",
+        "newArchEnabled": true
+      },
+      "package": "com.b4bhilly.mtnClone"
     },
     "web": {
       "favicon": "./assets/favicon.png"
