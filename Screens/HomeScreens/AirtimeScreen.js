@@ -78,6 +78,7 @@ const styles = StyleSheet.create({
         borderTopRightRadius:20,
         padding:20,
         flexDirection:'row',
+        justifyContent:'center'
     },
     button:{
         height:50,
@@ -103,7 +104,7 @@ const styles = StyleSheet.create({
     },
     box:{
         height:80,
-        width:310,
+        width:'auto',
         backgroundColor:'#ebe41c',
         borderRadius:7,
         marginTop:20,
@@ -112,7 +113,7 @@ const styles = StyleSheet.create({
     },
     box1:{
         height:80,
-        width:310,
+        width:'auto',
         backgroundColor:'#ebe41c',
         borderRadius:7,
         marginTop:10,

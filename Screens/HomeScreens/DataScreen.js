@@ -67,6 +67,7 @@ const styles = StyleSheet.create({
     borderTopRightRadius:20,
     padding:20,
     flexDirection:'row',
+    justifyContent:'center',
   },
   button:{
     height:50,
@@ -92,7 +93,7 @@ text:{
 },
 box:{
   height:80,
-  width:310,
+  width:'auto',
   backgroundColor:'#ebe41c',
   borderRadius:7,
   marginTop:20,

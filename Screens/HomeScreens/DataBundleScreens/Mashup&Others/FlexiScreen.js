@@ -108,7 +108,7 @@ const styles = StyleSheet.create({
     marginBottom: 90,
   },
   tab01: {
-    height: "55%",
+    height: 57,
     backgroundColor: "white",
     alignContent: "flex-end",
     margin: 1.5,
@@ -121,7 +121,7 @@ const styles = StyleSheet.create({
     width: "auto",
   },
   tab2: {
-    height: 100,
+    height: 115,
     width: "100%",
     backgroundColor: "#ebe41c",
     borderRadius: 10,
@@ -130,7 +130,7 @@ const styles = StyleSheet.create({
   },
   hi1: {
     padding: 15,
-    //paddingLeft:20,
+    paddingTop:20,
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "center",

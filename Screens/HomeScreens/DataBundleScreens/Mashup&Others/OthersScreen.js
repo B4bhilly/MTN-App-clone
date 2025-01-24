@@ -36,7 +36,7 @@ const OthersScreen = ({ navigation }) => {
           <AntDesign name="arrowleft" size={24} color="black" />
         </TouchableOpacity>
         <Text style={{ fontSize: 20, paddingLeft: 10, fontWeight: "bold" }}>
-          Mashup Bundles
+          Others
         </Text>
       </View>
       <View style={styles.tabContainer}>

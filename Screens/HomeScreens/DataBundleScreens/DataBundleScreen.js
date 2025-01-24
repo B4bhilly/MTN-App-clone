@@ -27,6 +27,10 @@ const DataBundleScreen = ({navigation}) => {
         navigation.navigate('Review');
     };
 
+    const handleNavigationToSDO =()=>{
+        navigation.navigate('SDO');
+    };
+
   return (
     <View style={styles.container}>
         <View style={styles.red}>
@@ -106,6 +110,15 @@ const DataBundleScreen = ({navigation}) => {
                 <AntDesign name="right" size={15} color="black" />
             </TouchableOpacity>
 
+            <TouchableOpacity onPress={handleNavigationToSDO} style={styles.butt}>
+                <MaterialIcons name="celebration" size={25} color="grey" />
+                <View style={{marginLeft:10, marginRight:'auto'}}>
+                    <Text style={{fontWeight:'bold'}}>Special Day Offer</Text>
+                    <Text>Get bundles on holidays and festivals</Text>
+                </View>
+                <AntDesign name="right" size={15} color="black" />
+            </TouchableOpacity>
+
         </View>
     </View>
   )
@@ -139,6 +152,7 @@ const styles = StyleSheet.create({
         height:'100%',
         width:'100%',
         borderTopLeftRadius:20,
+        //paddingBottom:20,
     },
     tab01:{
         height:57,

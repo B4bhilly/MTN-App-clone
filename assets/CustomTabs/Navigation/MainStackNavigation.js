@@ -29,6 +29,7 @@ import Review from '../../../Screens/HomeScreens/Review';
 import BuyAirtime1 from '../../../Screens/HomeScreens/BuyAirtime1';
 import ApprovalScreen from '../../../Screens/HomeScreens/ApprovalScreen';
 import ShopScreen from '../../../Screens/ShopScreens/ShopScreen';
+import SDOScreen from '../../../Screens/HomeScreens/DataBundleScreens/Mashup&Others/SDOScreen';
 
 
 const Stack = createNativeStackNavigator();
@@ -64,8 +65,9 @@ const MainStackNavigator = () => {
         <Stack.Screen name="QView" component={QViewAll} options={{headerShown:false}}/>
         <Stack.Screen name="Review" component={Review} options={{headerShown:false}}/>
         <Stack.Screen name="Buy1" component={BuyAirtime1} options={{headerShown:false}}/>
-        <Stack.Screen name='Approval' component={ApprovalScreen} options={{headerShown:false}}/>
+        <Stack.Screen name="Approval" component={ApprovalScreen} options={{headerShown:false}}/>
         <Stack.Screen name="MainTab" component={MainTabNavigator} options={{headerShown:false}}/>
+        <Stack.Screen name="SDO" component={SDOScreen} options={{headerShown:false}}/>
 
       </Stack.Navigator>
     </NavigationContainer>

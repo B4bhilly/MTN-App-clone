@@ -76,7 +76,7 @@ const styles = StyleSheet.create({
   },
   box:{
     height:80,
-    width:310,
+    width:'auto',
     backgroundColor:'#ebe41c',
     borderRadius:7,
     marginTop:20,
