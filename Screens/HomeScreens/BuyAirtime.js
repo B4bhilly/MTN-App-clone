@@ -25,6 +25,7 @@ const BuyAirtime = ({ navigation }) => {
     setSelectedNetwork(network);
     closeModal(); //closes modal after selection
   };
+
   return (
     <View style={styles.container}>
       <View style={styles.red}>
@@ -39,46 +40,50 @@ const BuyAirtime = ({ navigation }) => {
       <View style={{ backgroundColor: "#dee0e3", borderTopRightRadius: 20 }}>
         <View style={styles.one}>
           <Text>Selected products</Text>
-          <Text>Broadband Bundles</Text>
+          <Text>Airtime</Text>
         </View>
-        <View style={styles.two}>
-          <Text>Select Network </Text>
-          <TouchableOpacity onPress={toggleDrawer} style={styles.button}>
-            <Text style={[styles.text0, { color: "white" }]}>
-              {selectedNetwork}
-            </Text>
-            <FontAwesome5 name="angle-down" size={24} color="white" />
-          </TouchableOpacity>
-          <View style={styles.yhh}>
-            <Text>Select Recipient</Text>
-            <RadioButtonGroup />
-            {selectedNetwork === "Other networks (AT, Telecel)" && (
-              <View style={styles.box}>
-                <TextInput
-                  placeholder="Enter Number..."
-                  value={Number}
-                  keyboardType="numeric"
-                  maxLength={10}
-                />
-                <Pressable>
-                  <MaterialIcons
-                    style={{ top: 12 }}
-                    name="contact-phone"
-                    size={24}
-                    color="black"
-                  />
-                </Pressable>
+        <View style={{backgroundColor: "#ebf5f3",borderTopRightRadius: 20,}}>
+          <View style={styles.two}>
+            <View style={{padding:20,}}>
+              <Text>Select Network </Text>
+              <TouchableOpacity onPress={toggleDrawer} style={styles.button}>
+                <Text style={[styles.text0, { color: "white" }]}>
+                  {selectedNetwork}
+                </Text>
+                <FontAwesome5 name="angle-down" size={24} color="white" />
+              </TouchableOpacity>
+              <View style={styles.yhh}>
+                <Text>Select Recipient</Text>
+                <RadioButtonGroup />
+                {selectedNetwork === "Other networks (AT, Telecel)" && (
+                  <View style={styles.box}>
+                    <TextInput
+                      placeholder="Enter Number..."
+                      value={Number}
+                      keyboardType="numeric"
+                      maxLength={10}
+                    />
+                    <Pressable>
+                      <MaterialIcons
+                        style={{ top: 12 }}
+                        name="contact-phone"
+                        size={24}
+                        color="black"
+                      />
+                    </Pressable>
+                  </View>
+                )}
               </View>
-            )}
-          </View>
 
-          {/* <Text>Linked Broadband Accounts</Text>
-            <Text style={styles.text}>No Linked Broadband Accounts</Text> */}
-        </View>
-        <View style={styles.butt}>
-          <TouchableOpacity style={styles.button1}>
-            <Text style={styles.text1}>NEXT</Text>
-          </TouchableOpacity>
+              {/* <Text>Linked Broadband Accounts</Text>
+                  <Text style={styles.text}>No Linked Broadband Accounts</Text> */}
+            </View>
+            <View style={styles.butt}>
+              <TouchableOpacity style={styles.button1}>
+                <Text style={styles.text1}>NEXT</Text>
+              </TouchableOpacity>
+            </View>
+          </View>
         </View>
       </View>
       <Modal
@@ -117,11 +122,11 @@ export default BuyAirtime;
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
+    //flex: 1,
     backgroundColor: "#ebe41c",
   },
   red: {
-    height: "12.5%",
+    height: "10%",
     width: "100%",
     backgroundColor: "#ebe41c",
     flexDirection: "row",
@@ -139,11 +144,8 @@ const styles = StyleSheet.create({
     justifyContent: "space-between",
   },
   two: {
-    backgroundColor: "#ebf5f3",
     height: "100%",
     width: "100%",
-    borderTopRightRadius: 20,
-    padding: 20,
   },
   text: {
     marginTop: 10,
@@ -153,10 +155,9 @@ const styles = StyleSheet.create({
   },
   butt: {
     backgroundColor: "white",
-    height: "22.5%",
+    height: 120,
     width: "100%",
-    marginTop: "auto",
-    borderTopLeftRadius: 20,
+    margin:'auto',
     borderTopRightRadius: 20,
     alignItems: "center",
     paddingTop: 20,

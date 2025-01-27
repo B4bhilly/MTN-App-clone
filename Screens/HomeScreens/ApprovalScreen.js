@@ -15,6 +15,7 @@ const ApprovalScreen = ({navigation}) => {
     const handleNavigationToMainTab =() =>{
         navigation.navigate('MainTab')
     };
+
   return (
     <View style={styles.container}>
       <View style={styles.zero}>
@@ -48,16 +49,16 @@ export default ApprovalScreen;
 const styles = StyleSheet.create({
   container: {
     backgroundColor: "yellow",
-    flex: 1,
   },
   bottom: {
     height: 90,
     width: "auto",
-    marginTop: "auto",
     backgroundColor: "white",
     borderTopRightRadius: 20,
     padding: 20,
     flexDirection: "row",
+    justifyContent:'center',
+    alignItems:'center'
   },
   button: {
     height: 50,
@@ -89,7 +90,7 @@ const styles = StyleSheet.create({
     alignItems:'center',
     borderRadius:12,
     position:'absolute',
-    zIndex:'1,'
+    zIndex:1,
   },
   midc:{
     height: 80,
@@ -98,17 +99,16 @@ const styles = StyleSheet.create({
     backgroundColor:'orange',
     justifyContent:'center',
     alignItems:'center',
-    top:270,
+    top:260,
     borderWidth:4,
     borderColor:'white',
     position:'absolute',
     zIndex:2,
   },
   zero:{
-    height:'100%',
-    width:'100%',
+    height:'90%',
+    width:'auto',
     justifyContent:'center',
     alignItems:'center',
-
   },
 });

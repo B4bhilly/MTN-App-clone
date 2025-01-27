@@ -41,10 +41,11 @@ const Review = ({ navigation }) => {
       <View style={styles.one}>
         <View style={styles.two}>
           <Text style={styles.bold}>Data Bundle @ Undefined</Text>
-          <Text style={{ lineHeight: 40 }}>undefined</Text>
+          {/* <Text style={{ lineHeight: 40 }}>undefined</Text> */}
           <Text>For My Number()</Text>
         </View>
         <View style={styles.three}>
+          
           <View style={styles.four}>
             <View style={styles.five}>
               <Text style={styles.white}>Select payment method</Text>
@@ -69,7 +70,7 @@ const Review = ({ navigation }) => {
                 />
                 <View style={styles.pod}>
                   <View style={styles.black}></View>
-                  <Text style={[styles.radioText, { fontSize: 11 }]}>
+                  <Text style={[styles.radioText, { fontSize: 9 }]}>
                     4G BONUS *
                   </Text>
                 </View>
@@ -102,16 +103,16 @@ const Review = ({ navigation }) => {
               </Text>
             </View>
           )}
-        </View>
-      </View>
-      <View style={styles.bottom}>
-        <TouchableOpacity style={styles.button}>
-          <Text style={styles.text}>CANCEL</Text>
-        </TouchableOpacity>
+          <View style={styles.bottom}>
+            <TouchableOpacity style={styles.button}>
+              <Text style={styles.text}>CANCEL</Text>
+            </TouchableOpacity>
 
-        <TouchableOpacity onPress={handleNavigationToApproval} style={styles.button1}>
-          <Text style={styles.text}>PAY</Text>
-        </TouchableOpacity>
+            <TouchableOpacity onPress={handleNavigationToApproval} style={styles.button1}>
+              <Text style={styles.text}>PAY</Text>
+            </TouchableOpacity>
+        </View>
+        </View>
       </View>
     </View>
   );
@@ -121,11 +122,11 @@ export default Review;
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
+    //flex: 1,
     backgroundColor: "#ebe41c",
   },
   red: {
-    height: "12.5%",
+    height: "10%",
     width: "100%",
     backgroundColor: "#ebe41c",
     flexDirection: "row",
@@ -147,23 +148,27 @@ const styles = StyleSheet.create({
   three: {
     padding: 20,
     paddingTop: 30,
-    paddingBottom: 30,
+    //paddingBottom: 30,
     backgroundColor: "#ebf5f3",
-    borderTopLeftRadius: 20,
+    borderTopRightRadius: 20,
     height: "100%",
   },
   bold: {
     fontWeight: "bold",
     fontSize: 20,
+    marginBottom:10,
   },
   bottom: {
     height: 90,
-    width: "auto",
-    marginTop: "auto",
+    width: "111%",
+    //marginLeft:20,
     backgroundColor: "white",
     borderTopRightRadius: 20,
-    padding: 20,
     flexDirection: "row",
+    justifyContent:'center',
+    alignItems:'center',
+    marginTop:580,
+    position:'absolute',
   },
   button: {
     height: 50,
@@ -188,12 +193,11 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
   },
   four: {
-    height: "18%",
+    height: "15%",
     width: "100%",
     borderRadius: 10,
     backgroundColor: "white",
     overflow: "hidden",
-    margin:0,
     // Shadow properties
     shadowColor: "#000", // Shadow color
     shadowOffset: { width: 3, height: 3 }, // Shadow offset
@@ -227,7 +231,7 @@ const styles = StyleSheet.create({
     fontSize: 16,
   },
   bord: {
-    borderBottomWidth: StyleSheet.hairlineWidth,
+    borderBottomWidth: 1,
     borderColor: "grey",
     marginBottom: 10,
   },

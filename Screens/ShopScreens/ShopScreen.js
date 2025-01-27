@@ -167,7 +167,7 @@ const styles = StyleSheet.create({
       alignItems:'center',
   },
   tab01:{
-    height:'55%',
+    height:57,
     backgroundColor:'white',
     alignContent:'flex-end',
     margin:1.5,
