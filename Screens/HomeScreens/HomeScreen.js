@@ -243,15 +243,13 @@ const HomeScreen = ({ navigation }) => {
                   onPress={handleNavigationToJust4U}
                   style={[
                     styles.black,
-                    { justifyContent: "center", paddingLeft: 0 },
+                    { justifyContent: "center", paddingLeft: 0, backgroundColor:'#0a6395' },
                   ]}
                 >
-                  {/* <View style={styles.circle}>
-                   <MaterialCommunityIcons name="star" size={24} color="black" />
-                  </View> */}
-                  <Text style={styles.yhh1}>
-                    <Text style={{ color: "yellow" }}>MTN</Text>PULSE
-                  </Text>
+                  <View style={styles.circle}>
+                   <MaterialCommunityIcons name="star" size={24} color="yellow" />
+                  </View>
+                    <Text style={{ color: "yellow" }}>Send MoMo</Text>
                 </TouchableOpacity>
 
                 {/* <TouchableOpacity
@@ -389,9 +387,9 @@ const styles = StyleSheet.create({
     marginBottom:5,
     // Shadow properties
     shadowColor: "#000", // Shadow color
-    shadowOffset: { width: 3, height: 3 }, // Shadow offset
-    shadowOpacity: 0.3, // Shadow opacity
-    shadowRadius: 5, // Shadow blur radius
+    shadowOffset: { width: 5, height: 5 }, // Shadow offset
+    shadowOpacity: 0.9, // Shadow opacity
+    shadowRadius: 9, // Shadow blur radius
     elevation: 5, // Android shadow
   },
   tab1: {
@@ -519,10 +517,11 @@ const styles = StyleSheet.create({
   circle: {
     height: 30,
     width: 30,
-    backgroundColor: "white",
+    backgroundColor: "#292a2e",
     borderRadius: 100,
     alignItems: "center",
     justifyContent: "center",
+    marginRight:5,
   },
   yhh: {
     color: "white",
