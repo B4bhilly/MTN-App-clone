@@ -24,6 +24,10 @@ const ShopScreen = ({navigation}) => {
     navigation.navigate('Buy')
   };
 
+  const handleNavigationToReview = () =>{
+    navigation.navigate('Review');
+  };
+
   return (
     <View style={styles.container}>
       <View style={{padding:20,marginTop:30}}>
@@ -106,7 +110,7 @@ const ShopScreen = ({navigation}) => {
         </View>
         <View style={styles.color}>
             <Text style={{fontSize:20, marginBottom:10,marginTop:30,}}>Popular Bundle</Text>
-            <TouchableOpacity style={styles.tab2}>
+            <TouchableOpacity onPress={handleNavigationToReview} style={styles.tab2}>
               <View style={{marginBottom:'auto'}}>
                 <View style={styles.hi}>
                   <Text style={styles.pad1}>Data Bundle</Text>
@@ -208,7 +212,7 @@ const styles = StyleSheet.create({
   pad2:{
       paddingLeft: 10,
       paddingTop:10,
-      paddingRight:'30%',
+      paddingRight:'33%',
       borderRightWidth:StyleSheet.hairlineWidth,
       borderColor: 'grey',
       

@@ -1,5 +1,6 @@
 import { StyleSheet, Text, View, TouchableOpacity } from "react-native";
 import React from "react";
+import MainTab from "../../assets/CustomTabs/MainTab";
 import ShopScreen from "../ShopScreens/ShopScreen";
 import HomeScreen from "./HomeScreen";
 import {MaterialCommunityIcons} from "@expo/vector-icons";
@@ -28,7 +29,7 @@ const ApprovalScreen = ({navigation}) => {
       </View>
       <View style={styles.bottom}>
             <TouchableOpacity
-            onPress={handleNavigationToMainTab}
+            onPress={handleNavigationToShop}
             style={styles.button}>
             <Text style={styles.text}>SHOP</Text>
             </TouchableOpacity>

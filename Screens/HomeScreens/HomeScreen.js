@@ -182,9 +182,10 @@ const HomeScreen = ({ navigation }) => {
               </TouchableOpacity>
             </View>
             <View style={styles.txt}>
-              <Text style={styles.text}>
-                Showing balances as at {currentDateTime}
+              <Text style={[styles.text,{marginBottom:0}]}>
+                Showing balances as at
               </Text>
+              <Text style={styles.text}>{currentDateTime}</Text> 
             </View>
           </View>
           <View style={styles.body1}>
@@ -477,9 +478,10 @@ const styles = StyleSheet.create({
     justifyContent: "center",
   },
   text: {
-    color: "grey",
-    fontSize: 10,
+    color: "black",
+    fontSize: 13,
     marginBottom: 20,
+    fontWeight:'bold'
   },
   man: {
     flexDirection: "row",
@@ -496,8 +498,8 @@ const styles = StyleSheet.create({
   },
   black: {
     backgroundColor: "#292a2e",
-    height: 55,
-    width: 160,
+    height: 60,
+    width: 180,
     marginRight: 10,
     borderRadius: 10,
     alignItems: "center",
@@ -507,8 +509,8 @@ const styles = StyleSheet.create({
   },
   black1: {
     backgroundColor: "#292a2e",
-    height: 75,
-    width: 75,
+    height: 85,
+    width: 85,
     marginRight: 10,
     borderRadius: 10,
     alignItems: "center",
@@ -517,11 +519,13 @@ const styles = StyleSheet.create({
   circle: {
     height: 30,
     width: 30,
-    backgroundColor: "#292a2e",
+    backgroundColor: "#0a6395",
     borderRadius: 100,
     alignItems: "center",
     justifyContent: "center",
     marginRight:5,
+    borderWidth:1,
+    borderColor:'yellow',
   },
   yhh: {
     color: "white",

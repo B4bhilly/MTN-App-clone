@@ -40,7 +40,7 @@ const MainStackNavigator = () => {
       <Stack.Navigator>
         <Stack.Screen name="MainTabs" component={MainTabNavigator} options={{ headerShown: false }} />
         <Stack.Screen name="Home" component={HomeScreen} options={{headerShown:false}}/>
-        <Stack.Screen name="Shop" component={ShopScreen} options={{headerShown:false}}/>
+        {/* <Stack.Screen name="Shop" component={ShopScreen} options={{headerShown:false}}/> */}
         <Stack.Screen name="DBNavigator" component={DBNavigator} options={{headerShown:false}}/>
         <Stack.Screen name="Airtime" component={AirtimeScreen} options={{headerShown:false}}/>
         <Stack.Screen name="Data" component={DataScreen} options={{headerShown:false}}/>
