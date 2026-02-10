@@ -78,7 +78,7 @@ const HomeScreen = ({ navigation }) => {
                 style={styles.title}
               >
                 <Text style={styles.pad}>View all</Text>
-                <AntDesign name="rightcircle" size={14} color="black" />
+                <AntDesign name="arrow-right" size={14} color="black" />
               </TouchableOpacity>
             </View>
             <View style={{ padding: 10, flexDirection: "row",justifyContent:'center' }}>
@@ -201,7 +201,7 @@ const HomeScreen = ({ navigation }) => {
                 style={styles.title}
               >
                 <Text style={styles.pad}>View all</Text>
-                <AntDesign name="rightcircle" size={14} color="black" />
+                <AntDesign name="arrow-right" size={14} color="black" />
               </TouchableOpacity>
             </View>
 

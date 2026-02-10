@@ -1,4 +1,5 @@
-import { SafeAreaView, StyleSheet} from 'react-native';
+import { SafeAreaProvider, SafeAreaView } from 'react-native-safe-area-context';
+import { StyleSheet, Text, View } from 'react-native';
 import MainTab from './assets/CustomTabs/MainTab';
 import { NavigationContainer, useNavigation } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
@@ -22,9 +23,11 @@ const MainLayout= () =>{
 
 export default function App() {
   return (
-    <SafeAreaView style={styles.container}>
-      <MainStackNavigator/>
-    </SafeAreaView>
+    <SafeAreaProvider> 
+      <View style={styles.container}>
+        <MainStackNavigator/>
+      </View>
+    </SafeAreaProvider>
   );
 }
 

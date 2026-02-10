@@ -33,7 +33,7 @@ export default function DBNavigator({ navigation, route }) {
     <View style={styles.container}>
       <View style={styles.red}>
         <TouchableOpacity style={{ marginRight: 15 }} onPress={() => navigation.goBack()}>
-          <AntDesign name="arrowleft" size={24} color="black" />
+          <AntDesign name="arrow-left" size={24} color="black" />
         </TouchableOpacity>
         <Text style={{ fontSize: 20 }}>Detailed BalanceScreen</Text>
       </View>

@@ -81,7 +81,7 @@ const MomoScreen = ({ navigation }) => {
           style={{ marginRight: 15 }}
           onPress={handlenavigationToHomeScreen}
         >
-          <AntDesign name="arrowleft" size={24} color="black" />
+          <AntDesign name="arrow-left" size={24} color="black" />
         </TouchableOpacity>
         <Text style={{ fontSize: 20 }}>Momo</Text>
       </View>

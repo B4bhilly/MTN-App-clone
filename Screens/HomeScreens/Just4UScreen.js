@@ -7,7 +7,7 @@ const Just4UScreen = ({ navigation }) => {
     <View style={styles.container}>
         <View style={styles.red}>
             <TouchableOpacity onPress={() => navigation.goBack()}>
-                <AntDesign name="arrowleft" size={24} color="black" />
+                <AntDesign name="arrow-left" size={24} color="black" />
             </TouchableOpacity>
             <Text style={{ fontSize: 20, paddingLeft: 10, fontWeight: "bold" }}>
             Just4U Bundles
