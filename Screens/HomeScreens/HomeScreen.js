@@ -499,7 +499,7 @@ const styles = StyleSheet.create({
   black: {
     backgroundColor: "#292a2e",
     height: 60,
-    width: 180,
+    width: 160,
     marginRight: 10,
     borderRadius: 10,
     alignItems: "center",
@@ -509,8 +509,8 @@ const styles = StyleSheet.create({
   },
   black1: {
     backgroundColor: "#292a2e",
-    height: 85,
-    width: 85,
+    height: 75,
+    width: 75,
     marginRight: 10,
     borderRadius: 10,
     alignItems: "center",

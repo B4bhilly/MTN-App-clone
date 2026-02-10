@@ -4,7 +4,7 @@ import HomeScreen from '../../Screens/HomeScreens/HomeScreen'; // Adjust path as
 import ShopScreen from '../../Screens/ShopScreens/ShopScreen';
 import MomoScreen from '../../Screens/MomoScreens/MomoScreen';
 import MoreScreen from '../../Screens/MoreScreens/MoreScreen';
-import Ionicons from '@expo/vector-icons/Ionicons';
+import {Ionicons} from '@expo/vector-icons';
 
 const Tab = createBottomTabNavigator();
 

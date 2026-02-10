@@ -87,7 +87,7 @@ const BuyAirtime = ({ navigation }) => {
         </View>
       </View>
       <Modal
-        animationType="pop-up"
+        animationType="fade"
         transparent={true}
         visible={isDrawerVisible}
         onRequestClose={() => {
@@ -206,7 +206,7 @@ const styles = StyleSheet.create({
   },
   drawerContent: {
     backgroundColor: "white",
-    height: "11%",
+    height: "auto",
     width: "auto",
     borderRadius: 20,
     marginLeft: 20,
@@ -237,10 +237,9 @@ const styles = StyleSheet.create({
     marginBottom: 20,
     borderRadius: 5,
     borderColor: "grey",
+    // alignItems: "center",
   },
   yhh: {
-    //borderTopWidth: StyleSheet.hairlineWidth,
     borderColor: "grey",
-    //marginBottom:20,
   },
 });
