@@ -5,6 +5,7 @@ import { NavigationContainer, useNavigation } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import { useRef,useState } from 'react';
 import MainStackNavigator from './assets/CustomTabs/Navigation/MainStackNavigation';
+import { StatusBar } from 'expo-status-bar';
 
 const Stack = createStackNavigator()
 
@@ -24,9 +25,14 @@ const MainLayout= () =>{
 export default function App() {
   return (
     <SafeAreaProvider> 
-      <View style={styles.container}>
-        <MainStackNavigator/>
-      </View>
+      <SafeAreaView style={styles.SafeAreaView}>
+        <View style={styles.container}>
+          <StatusBar style="auto" />
+
+          <MainStackNavigator/>
+
+        </View>
+      </SafeAreaView>
     </SafeAreaProvider>
   );
 }
@@ -34,5 +40,9 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+  },
+  SafeAreaView: {
+    flex: 1,
+    backgroundColor: 'red',
   },
 });

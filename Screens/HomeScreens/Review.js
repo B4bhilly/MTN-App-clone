@@ -103,15 +103,15 @@ const Review = ({ navigation }) => {
               </Text>
             </View>
           )}
-          <View style={styles.bottom}>
-            <TouchableOpacity style={styles.button}>
-              <Text style={styles.text}>CANCEL</Text>
-            </TouchableOpacity>
-
-            <TouchableOpacity onPress={handleNavigationToApproval} style={styles.button1}>
-              <Text style={styles.text}>PAY</Text>
-            </TouchableOpacity>
         </View>
+        <View style={styles.bottom}>
+          <TouchableOpacity onPress={() => navigation.goBack()} style={styles.button}>
+            <Text style={styles.text}>CANCEL</Text>
+          </TouchableOpacity>
+
+          <TouchableOpacity onPress={handleNavigationToApproval} style={styles.button1}>
+            <Text style={styles.text}>PAY</Text>
+          </TouchableOpacity>
         </View>
       </View>
     </View>
@@ -146,12 +146,13 @@ const styles = StyleSheet.create({
     marginBottom: 20,
   },
   three: {
+    height: "100%",
     padding: 20,
     paddingTop: 30,
     //paddingBottom: 30,
     backgroundColor: "#ebf5f3",
     borderTopRightRadius: 20,
-    height: "100%",
+
   },
   bold: {
     fontWeight: "bold",
@@ -160,14 +161,14 @@ const styles = StyleSheet.create({
   },
   bottom: {
     height: 90,
-    width: "111%",
+    width: "100%",
     //marginLeft:20,
     backgroundColor: "white",
     borderTopRightRadius: 20,
     flexDirection: "row",
     justifyContent:'center',
     alignItems:'center',
-    marginTop:520,
+    marginTop:'155%',
     position:'absolute',
   },
   button: {
@@ -243,7 +244,7 @@ const styles = StyleSheet.create({
     height: 20,
     width: 80,
     borderRadius: 5,
-    justifyContent: "center",
+    // justifyContent: "center",
     alignItems: "center",
     overflow: "hidden",
     flexDirection: "row",

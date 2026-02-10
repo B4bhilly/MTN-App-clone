@@ -81,7 +81,7 @@ const HomeScreen = ({ navigation }) => {
                 <AntDesign name="arrow-right" size={14} color="black" />
               </TouchableOpacity>
             </View>
-            <View style={{ padding: 10, flexDirection: "row",justifyContent:'center' }}>
+            <View style={{ padding: 5, flexDirection: "row",justifyContent:'center' }}>
               <TouchableOpacity
                 onPress={handleNavigationToAirtime}
                 style={styles.tab}
@@ -358,7 +358,7 @@ const styles = StyleSheet.create({
     backgroundColor: "#ebf5f3",
     //width:'100%',
     height: "100%",
-    marginTop: "30%",
+    marginTop: "25%",
     borderTopRightRadius: 20,
     overflow: "hidden",
   },
